@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  socialanalize:
+    image: socialanalize
+    build:
+      context: ./SocialAnalize
+      dockerfile: Dockerfile
