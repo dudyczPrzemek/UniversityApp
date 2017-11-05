@@ -1,0 +1,13 @@
+D:\Users\Przemek\source\repos\SocialTest\SocialTest\obj\Debug\netcoreapp1.1\SocialTest.csprojResolveAssemblyReference.cache
+D:\Users\Przemek\source\repos\SocialTest\SocialTest\obj\Debug\netcoreapp1.1\SocialTest.csproj.SocialTest.dll.config
+D:\Users\Przemek\source\repos\SocialTest\SocialTest\obj\Debug\netcoreapp1.1\SocialTest.csproj.CoreCompileInputs.cache
+D:\Users\Przemek\source\repos\SocialTest\SocialTest\obj\Debug\netcoreapp1.1\SocialTest.AssemblyInfoInputs.cache
+D:\Users\Przemek\source\repos\SocialTest\SocialTest\obj\Debug\netcoreapp1.1\SocialTest.AssemblyInfo.cs
+D:\Users\Przemek\source\repos\SocialTest\SocialTest\bin\Debug\netcoreapp1.1\SocialTest.dll.config
+D:\Users\Przemek\source\repos\SocialTest\SocialTest\bin\Debug\netcoreapp1.1\SocialTest.deps.json
+D:\Users\Przemek\source\repos\SocialTest\SocialTest\bin\Debug\netcoreapp1.1\SocialTest.runtimeconfig.json
+D:\Users\Przemek\source\repos\SocialTest\SocialTest\bin\Debug\netcoreapp1.1\SocialTest.runtimeconfig.dev.json
+D:\Users\Przemek\source\repos\SocialTest\SocialTest\bin\Debug\netcoreapp1.1\SocialTest.dll
+D:\Users\Przemek\source\repos\SocialTest\SocialTest\bin\Debug\netcoreapp1.1\SocialTest.pdb
+D:\Users\Przemek\source\repos\SocialTest\SocialTest\obj\Debug\netcoreapp1.1\SocialTest.dll
+D:\Users\Przemek\source\repos\SocialTest\SocialTest\obj\Debug\netcoreapp1.1\SocialTest.pdb

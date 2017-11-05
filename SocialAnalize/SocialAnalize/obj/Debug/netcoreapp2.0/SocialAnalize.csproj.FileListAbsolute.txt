@@ -1,8 +1,0 @@
-D:\STUDIA\NPIS\App\UniversityApp\SocialAnalize\SocialAnalize\bin\Debug\netcoreapp2.0\SocialAnalize.deps.json
-D:\STUDIA\NPIS\App\UniversityApp\SocialAnalize\SocialAnalize\bin\Debug\netcoreapp2.0\SocialAnalize.runtimeconfig.json
-D:\STUDIA\NPIS\App\UniversityApp\SocialAnalize\SocialAnalize\bin\Debug\netcoreapp2.0\SocialAnalize.runtimeconfig.dev.json
-D:\STUDIA\NPIS\App\UniversityApp\SocialAnalize\SocialAnalize\bin\Debug\netcoreapp2.0\SocialAnalize.dll
-D:\STUDIA\NPIS\App\UniversityApp\SocialAnalize\SocialAnalize\obj\Debug\netcoreapp2.0\SocialAnalize.csprojResolveAssemblyReference.cache
-D:\STUDIA\NPIS\App\UniversityApp\SocialAnalize\SocialAnalize\obj\Debug\netcoreapp2.0\SocialAnalize.csproj.CoreCompileInputs.cache
-D:\STUDIA\NPIS\App\UniversityApp\SocialAnalize\SocialAnalize\obj\Debug\netcoreapp2.0\SocialAnalize.AssemblyInfoInputs.cache
-D:\STUDIA\NPIS\App\UniversityApp\SocialAnalize\SocialAnalize\obj\Debug\netcoreapp2.0\SocialAnalize.AssemblyInfo.cs
