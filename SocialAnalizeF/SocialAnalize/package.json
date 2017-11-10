@@ -1,5 +1,5 @@
 {
-  "name": "cloud-web-app",
+  "name": "SocialAnalize",
   "version": "1.0.0",
   "license": "UNLICENSED",
   "scripts": {
@@ -14,8 +14,7 @@
     "build-prod": "ng build --prod",
     "test-prod": "ng test --watch false --code-coverage",
     "e2e-prod": "ng e2e --no-serve",
-    "precommit": "npm run lint",
-    "prepush": "npm run lint && npm run test -- --single-run --watch false"
+    "precommit": "npm run lint"
   },
   "private": true,
   "dependencies": {

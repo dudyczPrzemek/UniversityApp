@@ -13,6 +13,7 @@
 
 .login-content {
     background-color: rgba(0,0,0,0.5);
+    border-radius: 25px;
 }
 
 .header-container {
