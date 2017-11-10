@@ -1,3 +1,49 @@
-#login-background{
-    background-color: #6495ED;
+.login-page{
+    background: url("../../../assets/images/loginBackground.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-content {
+    background-color: rgba(0,0,0,0.5);
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
+
+.login-header{
+    font-size: 3em;
+    color: #ffffff;
+}
+
+.login-app-name{
+    font-size: 4em;
+}
+
+.login-buttons{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
+
+.login-button{
+    width: 20em;
+}
+
+.login-button-container{
+    padding-bottom: 1em;
 }
