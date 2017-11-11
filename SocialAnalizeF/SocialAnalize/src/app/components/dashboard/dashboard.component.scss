@@ -1,0 +1,72 @@
+.dashboard-root {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+}
+
+.data-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 2em;
+    flex: 1 33%;
+}
+
+/*User icon and name*/
+
+.user-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 0 40%;
+}
+
+.user-icon-circle {
+    height: 10em;
+    width: 10em;
+    border-radius: 50%;
+}
+
+.user-name {
+    font-size: 3em;
+}
+
+/*Social page */
+.social-page {
+    flex: 0 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #B5B8B9;
+}
+
+/*Analizing buttons*/
+.analize-rect {
+    flex: 0 40%;
+    height: 10em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.personal-data {
+    background-color: #B5B8B9;
+}
+
+.location-analizer {
+    background-color: #B5B8B9;
+}
+
+.activity-analizer {
+    background-color: #B5B8B9;
+}
+
+.character-analizer {
+    background-color: #B5B8B9;
+}
+
+.data-btn {
+    width: 20em;
+}
