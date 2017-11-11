@@ -1,1 +1,9 @@
-<router-outlet></router-outlet>
+<div class="root">
+    <app-top-navigation class="top-navbar" *ngIf="isLogged"></app-top-navigation>
+    <div class="root-content">
+        <app-side-navigation class="side-navbar" *ngIf="isLogged"></app-side-navigation>
+        <div class="content" [class.full-size]="!isLogged">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

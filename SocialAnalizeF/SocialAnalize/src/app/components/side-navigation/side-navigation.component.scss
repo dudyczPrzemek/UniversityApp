@@ -1,0 +1,48 @@
+.side-navbar-root {
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+}
+
+.logged-user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1em;
+    padding-bottom: 2em;
+}
+
+.user-greeting {
+    padding-top:1em;
+}
+
+.logged-icon-circle {
+    height: 5em;
+    width: 5em;
+    border-radius: 50%;
+}
+
+.followed-user-header {
+    display: flex;
+    flex-direction: row;
+    padding-left: 0.5em;
+    padding-bottom: 1em;
+}
+
+.followed-user {
+    display: flex;
+    flex-direction: row;
+    padding-left: 2em;
+    padding-bottom: 1em;
+}
+
+.person-icon-circle {
+    height: 2.4em;
+    width: 2.4em;
+    border-radius: 50%;
+}
+
+.person-name {
+    padding-top: 0.5em;
+    padding-left: 1em;
+}
