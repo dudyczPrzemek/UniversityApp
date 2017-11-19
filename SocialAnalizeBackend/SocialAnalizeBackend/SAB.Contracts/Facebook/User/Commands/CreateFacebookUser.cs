@@ -1,17 +1,14 @@
-﻿using GoldenEye.Backend.Core.Entity;
+﻿using GoldenEye.Backend.Core.DDD.Commands;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using GoldenEye.Shared.Core.Objects.General;
 
-namespace SA.Contracts.Facebook
+namespace SA.Contracts.Facebook.User.Commands
 {
-    public class FacebookUser : IEntity
+    public class CreateFacebookUser : ICommand
     {
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-
-        object IHasId.Id => Id;
     }
 }

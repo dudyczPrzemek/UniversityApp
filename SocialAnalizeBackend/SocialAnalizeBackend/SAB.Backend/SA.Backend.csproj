@@ -8,7 +8,11 @@
     <PackageReference Include="AutoMapper" Version="6.2.1" />
     <PackageReference Include="GoldenEye.Backend.Core" Version="2.1.2" />
     <PackageReference Include="GoldenEye.Backend.Core.DDD" Version="2.1.2" />
+    <PackageReference Include="GoldenEye.Backend.Core.EntityFramework" Version="2.1.2" />
     <PackageReference Include="GoldenEye.Backend.Core.WebApi" Version="2.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.1" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="2.0.0" />
   </ItemGroup>
 
   <ItemGroup>

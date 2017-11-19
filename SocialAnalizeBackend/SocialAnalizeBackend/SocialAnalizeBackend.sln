@@ -3,17 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SA.WebApi", "SocialAnalizeBackend\SA.WebApi.csproj", "{66C6090D-1A48-44AB-9A65-CC7D60641447}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SA.WebApi", "SocialAnalizeBackend\SA.WebApi.csproj", "{66C6090D-1A48-44AB-9A65-CC7D60641447}"
 EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{B119A26C-ED5E-40C2-A083-D2D61B876DFD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SA.Backend", "SAB.Backend\SA.Backend.csproj", "{927D3107-0DE2-41CD-8A9E-254B786A2A55}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SA.Backend", "SAB.Backend\SA.Backend.csproj", "{927D3107-0DE2-41CD-8A9E-254B786A2A55}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SA.Contracts", "SAB.Contracts\SA.Contracts.csproj", "{81C53EA6-13C9-4964-BC92-4AC33A943CEA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SA.Contracts", "SAB.Contracts\SA.Contracts.csproj", "{81C53EA6-13C9-4964-BC92-4AC33A943CEA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SA.DB", "SAB.DB\SA.DB.csproj", "{35F2B99C-1CF7-4656-A12D-37EC3AD28FB9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SA.DB", "SAB.DB\SA.DB.csproj", "{35F2B99C-1CF7-4656-A12D-37EC3AD28FB9}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SA.Integrator", "SAB.Integrator\SA.Integrator.csproj", "{D42EFE71-7DC3-4F27-967F-D2E530C8E1B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SA.Integrator", "SAB.Integrator\SA.Integrator.csproj", "{D42EFE71-7DC3-4F27-967F-D2E530C8E1B2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,10 +23,6 @@ Global
 		{66C6090D-1A48-44AB-9A65-CC7D60641447}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66C6090D-1A48-44AB-9A65-CC7D60641447}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66C6090D-1A48-44AB-9A65-CC7D60641447}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B119A26C-ED5E-40C2-A083-D2D61B876DFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B119A26C-ED5E-40C2-A083-D2D61B876DFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B119A26C-ED5E-40C2-A083-D2D61B876DFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B119A26C-ED5E-40C2-A083-D2D61B876DFD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{927D3107-0DE2-41CD-8A9E-254B786A2A55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{927D3107-0DE2-41CD-8A9E-254B786A2A55}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{927D3107-0DE2-41CD-8A9E-254B786A2A55}.Release|Any CPU.ActiveCfg = Release|Any CPU

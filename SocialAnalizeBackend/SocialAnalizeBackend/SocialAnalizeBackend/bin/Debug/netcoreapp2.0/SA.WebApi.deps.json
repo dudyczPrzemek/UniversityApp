@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "cd42a4f7aee7f1409cffaa46daaa5ef79553d9d3"
+    "signature": "732e08b287b8333854b8880d36737bec403f5d7c"
   },
   "compilationOptions": {
     "defines": [
@@ -98,6 +98,18 @@
         },
         "compile": {
           "lib/netstandard2.0/GoldenEye.Backend.Core.DDD.dll": {}
+        }
+      },
+      "GoldenEye.Backend.Core.EntityFramework/2.1.2": {
+        "dependencies": {
+          "GoldenEye.Backend.Core": "2.1.2",
+          "Microsoft.EntityFrameworkCore": "2.0.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/GoldenEye.Backend.Core.EntityFramework.dll": {}
+        },
+        "compile": {
+          "lib/netstandard2.0/GoldenEye.Backend.Core.EntityFramework.dll": {}
         }
       },
       "GoldenEye.Backend.Core.WebApi/2.1.2": {
@@ -363,14 +375,14 @@
           "Microsoft.CodeAnalysis.Razor": "2.0.0",
           "Microsoft.Data.Sqlite": "2.0.0",
           "Microsoft.Data.Sqlite.Core": "2.0.0",
-          "Microsoft.EntityFrameworkCore": "2.0.0",
-          "Microsoft.EntityFrameworkCore.Design": "2.0.0",
+          "Microsoft.EntityFrameworkCore": "2.0.1",
+          "Microsoft.EntityFrameworkCore.Design": "2.0.1",
           "Microsoft.EntityFrameworkCore.InMemory": "2.0.0",
-          "Microsoft.EntityFrameworkCore.Relational": "2.0.0",
+          "Microsoft.EntityFrameworkCore.Relational": "2.0.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.0.0",
           "Microsoft.EntityFrameworkCore.Sqlite": "2.0.0",
           "Microsoft.EntityFrameworkCore.Sqlite.Core": "2.0.0",
-          "Microsoft.EntityFrameworkCore.Tools": "2.0.0",
+          "Microsoft.EntityFrameworkCore.Tools": "2.0.1",
           "Microsoft.Extensions.Caching.Abstractions": "2.0.0",
           "Microsoft.Extensions.Caching.Memory": "2.0.0",
           "Microsoft.Extensions.Caching.Redis": "2.0.0",
@@ -756,7 +768,7 @@
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore/2.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Http.Abstractions": "2.0.0",
-          "Microsoft.EntityFrameworkCore.Relational": "2.0.0"
+          "Microsoft.EntityFrameworkCore.Relational": "2.0.1"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll": {}
@@ -910,7 +922,7 @@
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore/2.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Identity": "2.0.0",
-          "Microsoft.EntityFrameworkCore.Relational": "2.0.0",
+          "Microsoft.EntityFrameworkCore.Relational": "2.0.1",
           "Microsoft.Extensions.Identity.Stores": "2.0.0"
         },
         "runtime": {
@@ -1702,7 +1714,7 @@
           "lib/netstandard1.3/Microsoft.DotNet.PlatformAbstractions.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore/2.0.0": {
+      "Microsoft.EntityFrameworkCore/2.0.1": {
         "dependencies": {
           "Microsoft.Extensions.Caching.Memory": "2.0.0",
           "Microsoft.Extensions.DependencyInjection": "2.0.0",
@@ -1720,9 +1732,9 @@
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Design/2.0.0": {
+      "Microsoft.EntityFrameworkCore.Design/2.0.1": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Relational": "2.0.0"
+          "Microsoft.EntityFrameworkCore.Relational": "2.0.1"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Design.dll": {}
@@ -1733,7 +1745,7 @@
       },
       "Microsoft.EntityFrameworkCore.InMemory/2.0.0": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore": "2.0.0"
+          "Microsoft.EntityFrameworkCore": "2.0.1"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.InMemory.dll": {}
@@ -1742,10 +1754,10 @@
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.InMemory.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Relational/2.0.0": {
+      "Microsoft.EntityFrameworkCore.Relational/2.0.1": {
         "dependencies": {
           "Microsoft.CSharp": "4.4.0",
-          "Microsoft.EntityFrameworkCore": "2.0.0",
+          "Microsoft.EntityFrameworkCore": "2.0.1",
           "Microsoft.Extensions.Configuration.Abstractions": "2.0.0"
         },
         "runtime": {
@@ -1764,7 +1776,7 @@
       "Microsoft.EntityFrameworkCore.Sqlite.Core/2.0.0": {
         "dependencies": {
           "Microsoft.Data.Sqlite.Core": "2.0.0",
-          "Microsoft.EntityFrameworkCore.Relational": "2.0.0"
+          "Microsoft.EntityFrameworkCore.Relational": "2.0.1"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Sqlite.dll": {}
@@ -1775,7 +1787,7 @@
       },
       "Microsoft.EntityFrameworkCore.SqlServer/2.0.0": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Relational": "2.0.0",
+          "Microsoft.EntityFrameworkCore.Relational": "2.0.1",
           "System.Data.SqlClient": "4.4.0"
         },
         "runtime": {
@@ -1785,9 +1797,9 @@
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.SqlServer.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Tools/2.0.0": {
+      "Microsoft.EntityFrameworkCore.Tools/2.0.1": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Design": "2.0.0"
+          "Microsoft.EntityFrameworkCore.Design": "2.0.1"
         }
       },
       "Microsoft.Extensions.Caching.Abstractions/2.0.0": {
@@ -2474,6 +2486,32 @@
         },
         "compile": {
           "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {}
+        }
+      },
+      "Npgsql/3.2.5": {
+        "dependencies": {
+          "System.Threading.Tasks.Extensions": "4.4.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Npgsql.dll": {}
+        },
+        "compile": {
+          "lib/netstandard2.0/Npgsql.dll": {}
+        }
+      },
+      "Npgsql.EntityFrameworkCore.PostgreSQL/2.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "2.0.1",
+          "Microsoft.EntityFrameworkCore.Relational": "2.0.1",
+          "Microsoft.Extensions.DependencyInjection": "2.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0",
+          "Npgsql": "3.2.5"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll": {}
+        },
+        "compile": {
+          "lib/netstandard2.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll": {}
         }
       },
       "ReflectionBridge/0.0.12": {
@@ -3979,7 +4017,11 @@
           "AutoMapper": "6.2.1",
           "GoldenEye.Backend.Core": "2.1.2",
           "GoldenEye.Backend.Core.DDD": "2.1.2",
+          "GoldenEye.Backend.Core.EntityFramework": "2.1.2",
           "GoldenEye.Backend.Core.WebApi": "2.1.2",
+          "Microsoft.EntityFrameworkCore": "2.0.1",
+          "Microsoft.EntityFrameworkCore.Tools": "2.0.1",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "2.0.0",
           "SA.Contracts": "1.0.0"
         },
         "runtime": {
@@ -4214,6 +4256,13 @@
       "sha512": "sha512-TmmXq3NEBuFndXWpCH0AN7mSdwRlexFrroG5nJZj9lE4akTuaLw1dGiXltedCYtdKjiXXV2mnCAY1Xwzi5PfLQ==",
       "path": "goldeneye.backend.core.ddd/2.1.2",
       "hashPath": "goldeneye.backend.core.ddd.2.1.2.nupkg.sha512"
+    },
+    "GoldenEye.Backend.Core.EntityFramework/2.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2Mlx2TJMOrAMcTHtCxDYb9xWUowuHrXpfYtj2566B2SVnzATm0fg4GCPl5ZUeEsHketnXavI6MotJ2NV1137EQ==",
+      "path": "goldeneye.backend.core.entityframework/2.1.2",
+      "hashPath": "goldeneye.backend.core.entityframework.2.1.2.nupkg.sha512"
     },
     "GoldenEye.Backend.Core.WebApi/2.1.2": {
       "type": "package",
@@ -4936,19 +4985,19 @@
       "path": "microsoft.dotnet.platformabstractions/2.0.0",
       "hashPath": "microsoft.dotnet.platformabstractions.2.0.0.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore/2.0.0": {
+    "Microsoft.EntityFrameworkCore/2.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-wmgBEpjoxd6ElVh13dlzmsl/9BtE5lky97vutJxLwFopP0IuWAyclCC2WHoXq4bYRmtzYSpmA4Q/kNugynswSA==",
-      "path": "microsoft.entityframeworkcore/2.0.0",
-      "hashPath": "microsoft.entityframeworkcore.2.0.0.nupkg.sha512"
+      "sha512": "sha512-RlwInZHfIUWwFgQJCpUMKrLeE8QJ64MA/GxD881oTMFa9j7iiGKCtI0xK4J1NNgRKvgVDPJbh9CIGJiu0KEdeA==",
+      "path": "microsoft.entityframeworkcore/2.0.1",
+      "hashPath": "microsoft.entityframeworkcore.2.0.1.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.Design/2.0.0": {
+    "Microsoft.EntityFrameworkCore.Design/2.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-v8e4OwmK+BIm7jINmGJaQz1+r6BiFl+bGJNVUF4JQZ9H40keeTIHEgKDxdEr+24EdllfLLKTisEziq1H089TYg==",
-      "path": "microsoft.entityframeworkcore.design/2.0.0",
-      "hashPath": "microsoft.entityframeworkcore.design.2.0.0.nupkg.sha512"
+      "sha512": "sha512-gEdT/YSI/buO15X/UN+gQY6D7qeozRYU80WuesZCj33jJBw4wCHHn8SYcp38k2BPOBDC4I2AfsOFH6Vaf8CeLQ==",
+      "path": "microsoft.entityframeworkcore.design/2.0.1",
+      "hashPath": "microsoft.entityframeworkcore.design.2.0.1.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore.InMemory/2.0.0": {
       "type": "package",
@@ -4957,12 +5006,12 @@
       "path": "microsoft.entityframeworkcore.inmemory/2.0.0",
       "hashPath": "microsoft.entityframeworkcore.inmemory.2.0.0.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.Relational/2.0.0": {
+    "Microsoft.EntityFrameworkCore.Relational/2.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-/Ay6EZXUZuPLCKdbLW59AuwCm+hqDgIxBzDTHIx6uEIvDFfC0Bs99CRL8Lgi1NgU9NOhFDmeRgE1goViru+Zgg==",
-      "path": "microsoft.entityframeworkcore.relational/2.0.0",
-      "hashPath": "microsoft.entityframeworkcore.relational.2.0.0.nupkg.sha512"
+      "sha512": "sha512-aZgfEDEzub+n9Kmsz/l4iiUHfB+R2iDDAFtW55OLpT7ANj7mS8k/bq8mqd60rVPgWKKy1l0+BK26ao4el/07lA==",
+      "path": "microsoft.entityframeworkcore.relational/2.0.1",
+      "hashPath": "microsoft.entityframeworkcore.relational.2.0.1.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore.Sqlite/2.0.0": {
       "type": "package",
@@ -4985,12 +5034,12 @@
       "path": "microsoft.entityframeworkcore.sqlserver/2.0.0",
       "hashPath": "microsoft.entityframeworkcore.sqlserver.2.0.0.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.Tools/2.0.0": {
+    "Microsoft.EntityFrameworkCore.Tools/2.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ILVI7sbnD0Pgf6B90AL3RiRdq+XRXEG4VnvuD75Fluv6p5PbYfU2tQP2VlL0oAFCVhihSgSWIQHtDjUFEE0+nw==",
-      "path": "microsoft.entityframeworkcore.tools/2.0.0",
-      "hashPath": "microsoft.entityframeworkcore.tools.2.0.0.nupkg.sha512"
+      "sha512": "sha512-/z1xawAD0oL5AyFd3vn9E7L6mE2UfEU91KwMDWEp8o0+AOrP4ZocJS5Kot5VYJMfDUeAzDBBZPmJs+r6/YUEiA==",
+      "path": "microsoft.entityframeworkcore.tools/2.0.1",
+      "hashPath": "microsoft.entityframeworkcore.tools.2.0.1.nupkg.sha512"
     },
     "Microsoft.Extensions.Caching.Abstractions/2.0.0": {
       "type": "package",
@@ -5390,6 +5439,20 @@
       "sha512": "sha512-5PYT/IqQ+UK31AmZiSS102R6EsTo+LGTSI8bp7WAUqDKaF4wHXD8U9u4WxTI1vc64tYi++8p3dk3WWNqPFgldw==",
       "path": "newtonsoft.json.bson/1.0.1",
       "hashPath": "newtonsoft.json.bson.1.0.1.nupkg.sha512"
+    },
+    "Npgsql/3.2.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-89z5pHuLuwjkHz/cQLuM/YxlepR/0NKJP+Cvu8z1cAMv7AdKZnN5leQqV6HxIQDR245Xal1w5OH7kDb9hDRupg==",
+      "path": "npgsql/3.2.5",
+      "hashPath": "npgsql.3.2.5.nupkg.sha512"
+    },
+    "Npgsql.EntityFrameworkCore.PostgreSQL/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-saKCNK8A5OW3sUhL/tvYqNyKUK7AbIQlZUVmjn4Fw9wstyopECeF/9Er1fexRLpWev0/H9fUzFclTrXm+omsag==",
+      "path": "npgsql.entityframeworkcore.postgresql/2.0.0",
+      "hashPath": "npgsql.entityframeworkcore.postgresql.2.0.0.nupkg.sha512"
     },
     "ReflectionBridge/0.0.12": {
       "type": "package",

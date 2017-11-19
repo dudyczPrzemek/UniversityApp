@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "ea234a1a5feb50d8d44eabe8d0c6dbb737ea5e53"
+    "signature": "6648122f3ff8a05656e8b4f5ec90388a51b32dc0"
   },
   "compilationOptions": {},
   "targets": {
@@ -11,7 +11,11 @@
           "AutoMapper": "6.2.1",
           "GoldenEye.Backend.Core": "2.1.2",
           "GoldenEye.Backend.Core.DDD": "2.1.2",
+          "GoldenEye.Backend.Core.EntityFramework": "2.1.2",
           "GoldenEye.Backend.Core.WebApi": "2.1.2",
+          "Microsoft.EntityFrameworkCore": "2.0.1",
+          "Microsoft.EntityFrameworkCore.Tools": "2.0.1",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "2.0.0",
           "SA.Contracts": "1.0.0"
         },
         "runtime": {
@@ -61,6 +65,15 @@
         },
         "runtime": {
           "lib/netstandard2.0/GoldenEye.Backend.Core.DDD.dll": {}
+        }
+      },
+      "GoldenEye.Backend.Core.EntityFramework/2.1.2": {
+        "dependencies": {
+          "GoldenEye.Backend.Core": "2.1.2",
+          "Microsoft.EntityFrameworkCore": "2.0.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/GoldenEye.Backend.Core.EntityFramework.dll": {}
         }
       },
       "GoldenEye.Backend.Core.WebApi/2.1.2": {
@@ -631,7 +644,7 @@
           "System.AppContext": "4.3.0",
           "System.Collections": "4.3.0",
           "System.Collections.Concurrent": "4.3.0",
-          "System.Collections.Immutable": "1.3.1",
+          "System.Collections.Immutable": "1.4.0",
           "System.Console": "4.3.0",
           "System.Diagnostics.Debug": "4.3.0",
           "System.Diagnostics.FileVersionInfo": "4.3.0",
@@ -703,6 +716,44 @@
         },
         "runtime": {
           "lib/netstandard1.3/Microsoft.DotNet.PlatformAbstractions.dll": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore/2.0.1": {
+        "dependencies": {
+          "Microsoft.Extensions.Caching.Memory": "2.0.0",
+          "Microsoft.Extensions.DependencyInjection": "2.0.0",
+          "Microsoft.Extensions.Logging": "2.0.0",
+          "Remotion.Linq": "2.1.1",
+          "System.Collections.Immutable": "1.4.0",
+          "System.ComponentModel.Annotations": "4.4.0",
+          "System.Diagnostics.DiagnosticSource": "4.4.1",
+          "System.Interactive.Async": "3.1.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.EntityFrameworkCore.dll": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Design/2.0.1": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Relational": "2.0.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Design.dll": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Relational/2.0.1": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.4.0",
+          "Microsoft.EntityFrameworkCore": "2.0.1",
+          "Microsoft.Extensions.Configuration.Abstractions": "2.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Relational.dll": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Tools/2.0.1": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "2.0.1"
         }
       },
       "Microsoft.Extensions.Caching.Abstractions/2.0.0": {
@@ -934,6 +985,26 @@
           "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {}
         }
       },
+      "Npgsql/3.2.5": {
+        "dependencies": {
+          "System.Threading.Tasks.Extensions": "4.4.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Npgsql.dll": {}
+        }
+      },
+      "Npgsql.EntityFrameworkCore.PostgreSQL/2.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "2.0.1",
+          "Microsoft.EntityFrameworkCore.Relational": "2.0.1",
+          "Microsoft.Extensions.DependencyInjection": "2.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0",
+          "Npgsql": "3.2.5"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll": {}
+        }
+      },
       "ReflectionBridge/0.0.12": {
         "dependencies": {
           "System.Collections": "4.3.0",
@@ -944,6 +1015,24 @@
         },
         "runtime": {
           "lib/netstandard1.3/ReflectionBridge.dll": {}
+        }
+      },
+      "Remotion.Linq/2.1.1": {
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Linq": "4.3.0",
+          "System.Linq.Expressions": "4.3.0",
+          "System.Linq.Queryable": "4.3.0",
+          "System.ObjectModel": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Extensions": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Threading": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.0/Remotion.Linq.dll": {}
         }
       },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
@@ -1137,18 +1226,7 @@
           "System.Threading.Tasks": "4.3.0"
         }
       },
-      "System.Collections.Immutable/1.3.1": {
-        "dependencies": {
-          "System.Collections": "4.3.0",
-          "System.Diagnostics.Debug": "4.3.0",
-          "System.Globalization": "4.3.0",
-          "System.Linq": "4.3.0",
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0",
-          "System.Runtime.Extensions": "4.3.0",
-          "System.Threading": "4.3.0"
-        }
-      },
+      "System.Collections.Immutable/1.4.0": {},
       "System.Collections.NonGeneric/4.3.0": {
         "dependencies": {
           "System.Diagnostics.Debug": "4.3.0",
@@ -1307,6 +1385,11 @@
             "rid": "win",
             "assetType": "runtime"
           }
+        }
+      },
+      "System.Interactive.Async/3.1.1": {
+        "runtime": {
+          "lib/netstandard1.3/System.Interactive.Async.dll": {}
         }
       },
       "System.IO/4.3.0": {
@@ -1959,6 +2042,13 @@
       "path": "goldeneye.backend.core.ddd/2.1.2",
       "hashPath": "goldeneye.backend.core.ddd.2.1.2.nupkg.sha512"
     },
+    "GoldenEye.Backend.Core.EntityFramework/2.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2Mlx2TJMOrAMcTHtCxDYb9xWUowuHrXpfYtj2566B2SVnzATm0fg4GCPl5ZUeEsHketnXavI6MotJ2NV1137EQ==",
+      "path": "goldeneye.backend.core.entityframework/2.1.2",
+      "hashPath": "goldeneye.backend.core.entityframework.2.1.2.nupkg.sha512"
+    },
     "GoldenEye.Backend.Core.WebApi/2.1.2": {
       "type": "package",
       "serviceable": true,
@@ -2358,6 +2448,34 @@
       "path": "microsoft.dotnet.platformabstractions/2.0.0",
       "hashPath": "microsoft.dotnet.platformabstractions.2.0.0.nupkg.sha512"
     },
+    "Microsoft.EntityFrameworkCore/2.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-RlwInZHfIUWwFgQJCpUMKrLeE8QJ64MA/GxD881oTMFa9j7iiGKCtI0xK4J1NNgRKvgVDPJbh9CIGJiu0KEdeA==",
+      "path": "microsoft.entityframeworkcore/2.0.1",
+      "hashPath": "microsoft.entityframeworkcore.2.0.1.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Design/2.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gEdT/YSI/buO15X/UN+gQY6D7qeozRYU80WuesZCj33jJBw4wCHHn8SYcp38k2BPOBDC4I2AfsOFH6Vaf8CeLQ==",
+      "path": "microsoft.entityframeworkcore.design/2.0.1",
+      "hashPath": "microsoft.entityframeworkcore.design.2.0.1.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Relational/2.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-aZgfEDEzub+n9Kmsz/l4iiUHfB+R2iDDAFtW55OLpT7ANj7mS8k/bq8mqd60rVPgWKKy1l0+BK26ao4el/07lA==",
+      "path": "microsoft.entityframeworkcore.relational/2.0.1",
+      "hashPath": "microsoft.entityframeworkcore.relational.2.0.1.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Tools/2.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/z1xawAD0oL5AyFd3vn9E7L6mE2UfEU91KwMDWEp8o0+AOrP4ZocJS5Kot5VYJMfDUeAzDBBZPmJs+r6/YUEiA==",
+      "path": "microsoft.entityframeworkcore.tools/2.0.1",
+      "hashPath": "microsoft.entityframeworkcore.tools.2.0.1.nupkg.sha512"
+    },
     "Microsoft.Extensions.Caching.Abstractions/2.0.0": {
       "type": "package",
       "serviceable": true,
@@ -2554,12 +2672,33 @@
       "path": "newtonsoft.json.bson/1.0.1",
       "hashPath": "newtonsoft.json.bson.1.0.1.nupkg.sha512"
     },
+    "Npgsql/3.2.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-89z5pHuLuwjkHz/cQLuM/YxlepR/0NKJP+Cvu8z1cAMv7AdKZnN5leQqV6HxIQDR245Xal1w5OH7kDb9hDRupg==",
+      "path": "npgsql/3.2.5",
+      "hashPath": "npgsql.3.2.5.nupkg.sha512"
+    },
+    "Npgsql.EntityFrameworkCore.PostgreSQL/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-saKCNK8A5OW3sUhL/tvYqNyKUK7AbIQlZUVmjn4Fw9wstyopECeF/9Er1fexRLpWev0/H9fUzFclTrXm+omsag==",
+      "path": "npgsql.entityframeworkcore.postgresql/2.0.0",
+      "hashPath": "npgsql.entityframeworkcore.postgresql.2.0.0.nupkg.sha512"
+    },
     "ReflectionBridge/0.0.12": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-ahzdbw8gNZ/Lt0aGC3gUTRAaEk5umofQ701/k2CRs60jRXLeqToVaBpL/YLVHNvc7UNpHNpy1NnUal0yB6Qiqw==",
       "path": "reflectionbridge/0.0.12",
       "hashPath": "reflectionbridge.0.0.12.nupkg.sha512"
+    },
+    "Remotion.Linq/2.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6jkPe+f/RfkSUW715CyXFe8Xv/4H0cpaU7YwIoNWDOLAyk5vTjr7oEdV6Hb8S1qPGHFE+zn0CsL+1wDClvAW7Q==",
+      "path": "remotion.linq/2.1.1",
+      "hashPath": "remotion.linq.2.1.1.nupkg.sha512"
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
       "type": "package",
@@ -2729,12 +2868,12 @@
       "path": "system.collections.concurrent/4.3.0",
       "hashPath": "system.collections.concurrent.4.3.0.nupkg.sha512"
     },
-    "System.Collections.Immutable/1.3.1": {
+    "System.Collections.Immutable/1.4.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-n+AGX7zmiZumW9aggOkXaHzUeAS3EfeTErnkKCusyONUozbTv+kMb8VE36m+ldV6kF9g57G2c641KCdgH9E0pg==",
-      "path": "system.collections.immutable/1.3.1",
-      "hashPath": "system.collections.immutable.1.3.1.nupkg.sha512"
+      "sha512": "sha512-71hw5RUJRu5+q/geUY69gpXD8Upd12cH+F3MwpXV2zle7Bqqkrmc1JblOTuvUcgmdnUtQvBlV5e1d6RH+H2lvA==",
+      "path": "system.collections.immutable/1.4.0",
+      "hashPath": "system.collections.immutable.1.4.0.nupkg.sha512"
     },
     "System.Collections.NonGeneric/4.3.0": {
       "type": "package",
@@ -2854,6 +2993,13 @@
       "sha512": "sha512-FhKmdR6MPG+pxow6wGtNAWdZh7noIOpdD5TwQ3CprzgIE1bBBoim0vbR1+AWsWjQmU7zXHgQo4TWSP6lCeiWcQ==",
       "path": "system.globalization.extensions/4.3.0",
       "hashPath": "system.globalization.extensions.4.3.0.nupkg.sha512"
+    },
+    "System.Interactive.Async/3.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hZccYiIE5RS1/J9Tb/BNtosAGVggdlsJm4Ojdu+gDV0p4AIi+LUfUogMKkRacljQEJd2AG6vYzvcjhQFkqoZmw==",
+      "path": "system.interactive.async/3.1.1",
+      "hashPath": "system.interactive.async.3.1.1.nupkg.sha512"
     },
     "System.IO/4.3.0": {
       "type": "package",

@@ -2,6 +2,7 @@
 using GoldenEye.Backend.Core.DDD.Queries;
 using Microsoft.AspNetCore.Mvc;
 using SA.Contracts.Facebook;
+using SA.Contracts.Facebook.User.Commands;
 using SA.Contracts.Facebook.User.Queries;
 using System;
 using System.Collections.Generic;
@@ -26,5 +27,12 @@ namespace SA.WebApi.Controllers.Facebook
         {
             return queryBus.Send<GetFacebookUser, FacebookUser>(new GetFacebookUser { Id = id});
         }
-    }
+
+        [HttpPut]
+        public async Task<IActionResult> Put([FromBody]CreateFacebookUser command)
+        {
+            await commandBus.Send(command);
+            return Ok();
+        }
+    } 
 }
