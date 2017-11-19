@@ -149,6 +149,19 @@
           "lib/netstandard2.0/GoldenEye.Shared.Core.Validation.dll": {}
         }
       },
+      "InstaSharp/2.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "9.0.1",
+          "Portable.BouncyCastle": "1.8.1.1"
+        },
+        "compile": {
+          "lib/netstandard1.2/InstaSharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.2/InstaSharp.dll": {}
+        }
+      },
       "Libuv/1.10.0": {
         "type": "package",
         "dependencies": {
@@ -2942,6 +2955,31 @@
           "lib/netstandard2.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll": {}
         }
       },
+      "Portable.BouncyCastle/1.8.1.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.0.11",
+          "System.Diagnostics.Debug": "4.0.11",
+          "System.Globalization": "4.0.11",
+          "System.IO": "4.1.0",
+          "System.IO.FileSystem": "4.0.1",
+          "System.IO.FileSystem.Primitives": "4.0.1",
+          "System.Linq": "4.1.0",
+          "System.Reflection": "4.1.0",
+          "System.Reflection.Extensions": "4.0.1",
+          "System.Runtime": "4.1.0",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Text.Encoding": "4.0.11",
+          "System.Threading": "4.0.11",
+          "System.Threading.Tasks": "4.0.11"
+        },
+        "compile": {
+          "lib/netstandard1.3/crypto.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/crypto.dll": {}
+        }
+      },
       "ReflectionBridge/0.0.12": {
         "type": "package",
         "dependencies": {
@@ -5204,6 +5242,16 @@
         "goldeneye.shared.core.validation.2.1.2.nupkg.sha512",
         "goldeneye.shared.core.validation.nuspec",
         "lib/netstandard2.0/GoldenEye.Shared.Core.Validation.dll"
+      ]
+    },
+    "InstaSharp/2.0.6": {
+      "sha512": "yeyOd0TTELq6/7meCnFcN44aNRRoG6xlGRwkRm3AspH1G9oMmJz/tFelX0WBbjyxPQ2zjFyFPMYC6sJJ1Fz3IQ==",
+      "type": "package",
+      "path": "instasharp/2.0.6",
+      "files": [
+        "instasharp.2.0.6.nupkg.sha512",
+        "instasharp.nuspec",
+        "lib/netstandard1.2/InstaSharp.dll"
       ]
     },
     "Libuv/1.10.0": {
@@ -8091,6 +8139,25 @@
         "lib/netstandard2.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll",
         "npgsql.entityframeworkcore.postgresql.2.0.0.nupkg.sha512",
         "npgsql.entityframeworkcore.postgresql.nuspec"
+      ]
+    },
+    "Portable.BouncyCastle/1.8.1.1": {
+      "sha512": "bKqC2Me9ukybNYTBhlYd2sJ6j2kRV7SgB+JfiP2GueYq6QdM4Ym6PYV5eyrqb6KViOyd3zqQfJp0o6UW5ZG+GQ==",
+      "type": "package",
+      "path": "portable.bouncycastle/1.8.1.1",
+      "files": [
+        "Readme.html",
+        "lib/netstandard1.0/crypto.dll",
+        "lib/netstandard1.0/crypto.pdb",
+        "lib/netstandard1.0/crypto.xml",
+        "lib/netstandard1.3/crypto.dll",
+        "lib/netstandard1.3/crypto.pdb",
+        "lib/netstandard1.3/crypto.xml",
+        "lib/portable-net4+sl5+wp8+win8+wpa81/crypto.dll",
+        "lib/portable-net4+sl5+wp8+win8+wpa81/crypto.pdb",
+        "lib/portable-net4+sl5+wp8+win8+wpa81/crypto.xml",
+        "portable.bouncycastle.1.8.1.1.nupkg.sha512",
+        "portable.bouncycastle.nuspec"
       ]
     },
     "ReflectionBridge/0.0.12": {
@@ -13179,6 +13246,7 @@
       "GoldenEye.Backend.Core >= 2.1.2",
       "GoldenEye.Backend.Core.DDD >= 2.1.2",
       "GoldenEye.Backend.Core.WebApi >= 2.1.2",
+      "InstaSharp >= 2.0.6",
       "Microsoft.AspNetCore.All >= 2.0.0",
       "Microsoft.NETCore.App >= 2.0.0",
       "SA.Backend >= 1.0.0",
@@ -13249,6 +13317,10 @@
           "AutoMapper": {
             "target": "Package",
             "version": "6.2.1"
+          },
+          "InstaSharp": {
+            "target": "Package",
+            "version": "2.0.6"
           },
           "GoldenEye.Backend.Core": {
             "target": "Package",

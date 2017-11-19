@@ -13,6 +13,8 @@ using System;
 using SA.Contracts.Facebook.User.Commands;
 using SA.Contracts.Twitter.User.Queries;
 using SA.Backend.Twitter.User;
+using SA.Contracts.Instagram.User.Queries;
+using SA.Backend.Instagram.User;
 
 namespace SA.Backend
 {
@@ -42,6 +44,9 @@ namespace SA.Backend
 
             //TWITTER
             services.RegisterAsyncQueryHandler<GetTwitterAccessToken, string, TwitterUserQueryHandler>();
+
+            //INSTAGRAM
+            services.RegisterAsyncQueryHandler<GetInstagramAccessToken, string, InstagramUserQueryHandler>();
         }
 
         private void RegisterRepositories(IServiceCollection services)
