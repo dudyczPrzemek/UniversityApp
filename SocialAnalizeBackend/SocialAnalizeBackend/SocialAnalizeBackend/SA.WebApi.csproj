@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Controllers\Instagram\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
@@ -15,6 +16,7 @@
     <PackageReference Include="GoldenEye.Backend.Core.DDD" Version="2.1.2" />
     <PackageReference Include="GoldenEye.Backend.Core.WebApi" Version="2.1.2" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+    <PackageReference Include="TweetinviAPI" Version="2.1.0" />
   </ItemGroup>
 
   <ItemGroup>

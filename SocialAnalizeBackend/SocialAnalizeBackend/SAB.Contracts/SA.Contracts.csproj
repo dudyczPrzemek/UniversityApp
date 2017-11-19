@@ -9,6 +9,7 @@
     <PackageReference Include="GoldenEye.Backend.Core" Version="2.1.2" />
     <PackageReference Include="GoldenEye.Backend.Core.DDD" Version="2.1.2" />
     <PackageReference Include="GoldenEye.Backend.Core.WebApi" Version="2.1.2" />
+    <PackageReference Include="TweetinviAPI" Version="2.1.0" />
   </ItemGroup>
 
 </Project>

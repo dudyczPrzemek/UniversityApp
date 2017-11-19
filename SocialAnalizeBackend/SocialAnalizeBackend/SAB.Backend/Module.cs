@@ -11,6 +11,8 @@ using GoldenEye.Backend.Core.EntityFramework.Registration;
 using Microsoft.EntityFrameworkCore;
 using System;
 using SA.Contracts.Facebook.User.Commands;
+using SA.Contracts.Twitter.User.Queries;
+using SA.Backend.Twitter.User;
 
 namespace SA.Backend
 {
@@ -33,9 +35,13 @@ namespace SA.Backend
 
         private void RegisterHandlers(IServiceCollection services)
         {
+            //FACEBOOK
             services.RegisterAsyncQueryHandler<GetFacebookUser, FacebookUser, FacebookUserQueryHandler>();
             services.RegisterAsyncQueryHandler<GetFacebookAccessToken, string, FacebookUserQueryHandler>();
             services.RegisterAsyncCommandHandler<CreateFacebookUser, FacebookUserCommandHandler>();
+
+            //TWITTER
+            services.RegisterAsyncQueryHandler<GetTwitterAccessToken, string, TwitterUserQueryHandler>();
         }
 
         private void RegisterRepositories(IServiceCollection services)
