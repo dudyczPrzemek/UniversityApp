@@ -1,0 +1,15 @@
+D:\STUDIA\NPIS\App\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SocialAnalizeBackend\obj\Debug\netcoreapp2.0\SA.WebApi.csprojResolveAssemblyReference.cache
+D:\STUDIA\NPIS\App\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SocialAnalizeBackend\obj\Debug\netcoreapp2.0\SA.WebApi.csproj.CoreCompileInputs.cache
+D:\STUDIA\NPIS\App\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SocialAnalizeBackend\obj\Debug\netcoreapp2.0\SA.WebApi.AssemblyInfoInputs.cache
+D:\STUDIA\NPIS\App\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SocialAnalizeBackend\obj\Debug\netcoreapp2.0\SA.WebApi.AssemblyInfo.cs
+D:\STUDIA\NPIS\App\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SocialAnalizeBackend\bin\Debug\netcoreapp2.0\SA.WebApi.deps.json
+D:\STUDIA\NPIS\App\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SocialAnalizeBackend\bin\Debug\netcoreapp2.0\SA.WebApi.runtimeconfig.json
+D:\STUDIA\NPIS\App\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SocialAnalizeBackend\bin\Debug\netcoreapp2.0\SA.WebApi.runtimeconfig.dev.json
+D:\STUDIA\NPIS\App\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SocialAnalizeBackend\bin\Debug\netcoreapp2.0\SA.WebApi.dll
+D:\STUDIA\NPIS\App\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SocialAnalizeBackend\bin\Debug\netcoreapp2.0\SA.WebApi.pdb
+D:\STUDIA\NPIS\App\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SocialAnalizeBackend\bin\Debug\netcoreapp2.0\SA.Contracts.dll
+D:\STUDIA\NPIS\App\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SocialAnalizeBackend\bin\Debug\netcoreapp2.0\SA.Contracts.pdb
+D:\STUDIA\NPIS\App\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SocialAnalizeBackend\obj\Debug\netcoreapp2.0\SA.WebApi.dll
+D:\STUDIA\NPIS\App\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SocialAnalizeBackend\obj\Debug\netcoreapp2.0\SA.WebApi.pdb
+D:\STUDIA\NPIS\App\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SocialAnalizeBackend\bin\Debug\netcoreapp2.0\SA.Backend.dll
+D:\STUDIA\NPIS\App\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SocialAnalizeBackend\bin\Debug\netcoreapp2.0\SA.Backend.pdb

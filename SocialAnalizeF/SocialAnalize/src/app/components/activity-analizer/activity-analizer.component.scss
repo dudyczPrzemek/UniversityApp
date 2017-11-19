@@ -1,0 +1,23 @@
+.activity-root {
+    padding: 1em;
+}
+
+.activity-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.activity-header {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.activity-header-container {
+    padding-bottom: 2em;
+}
+
+/deep/{
+    .legend-label-text {
+        color: #000000;
+    }
+}

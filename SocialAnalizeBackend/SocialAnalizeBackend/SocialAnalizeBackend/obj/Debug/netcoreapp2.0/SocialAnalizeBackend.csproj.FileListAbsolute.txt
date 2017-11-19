@@ -1,0 +1,11 @@
+D:\STUDIA\NPIS\App\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SocialAnalizeBackend\bin\Debug\netcoreapp2.0\SocialAnalizeBackend.deps.json
+D:\STUDIA\NPIS\App\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SocialAnalizeBackend\bin\Debug\netcoreapp2.0\SocialAnalizeBackend.runtimeconfig.json
+D:\STUDIA\NPIS\App\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SocialAnalizeBackend\bin\Debug\netcoreapp2.0\SocialAnalizeBackend.runtimeconfig.dev.json
+D:\STUDIA\NPIS\App\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SocialAnalizeBackend\bin\Debug\netcoreapp2.0\SocialAnalizeBackend.dll
+D:\STUDIA\NPIS\App\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SocialAnalizeBackend\bin\Debug\netcoreapp2.0\SocialAnalizeBackend.pdb
+D:\STUDIA\NPIS\App\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SocialAnalizeBackend\obj\Debug\netcoreapp2.0\SocialAnalizeBackend.csprojResolveAssemblyReference.cache
+D:\STUDIA\NPIS\App\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SocialAnalizeBackend\obj\Debug\netcoreapp2.0\SocialAnalizeBackend.csproj.CoreCompileInputs.cache
+D:\STUDIA\NPIS\App\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SocialAnalizeBackend\obj\Debug\netcoreapp2.0\SocialAnalizeBackend.AssemblyInfoInputs.cache
+D:\STUDIA\NPIS\App\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SocialAnalizeBackend\obj\Debug\netcoreapp2.0\SocialAnalizeBackend.AssemblyInfo.cs
+D:\STUDIA\NPIS\App\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SocialAnalizeBackend\obj\Debug\netcoreapp2.0\SocialAnalizeBackend.dll
+D:\STUDIA\NPIS\App\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SocialAnalizeBackend\obj\Debug\netcoreapp2.0\SocialAnalizeBackend.pdb

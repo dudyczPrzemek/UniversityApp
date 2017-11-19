@@ -1,3 +1,40 @@
-<p>
-  activity-analizer works!
-</p>
+<div class="activity-root">
+  <div class="activity-header-container">
+    <span class="activity-header">Internet activity analizer</span>
+  </div>
+  <div class="activity-content">
+    <div class="hashtags-chart">
+      <label class="hashtags-chart-header">Hashtags of user:</label>
+      <ngx-charts-bar-vertical
+        [view]="hashtagChartModel.view"
+        [scheme]="hashtagChartModel.colorScheme"
+        [results]="hashtagChartModel.data"
+        [gradient]="hashtagChartModel.gradient"
+        [xAxis]="hashtagChartModel.showXAxis"
+        [yAxis]="hashtagChartModel.showYAxis"
+        [legend]="hashtagChartModel.showLegend"
+        [showXAxisLabel]="hashtagChartModel.showXAxisLabel"
+        [showYAxisLabel]="hashtagChartModel.showYAxisLabel"
+        [xAxisLabel]="hashtagChartModel.xAxisLabel"
+        [yAxisLabel]="hashtagChartModel.yAxisLabel">
+      </ngx-charts-bar-vertical>
+    </div>
+    <div class="hours-activity-chart">
+      <label class="hours-activity-chart">Activity during day:</label>
+      <ngx-charts-line-chart
+        [view]="hourActivityChart.view"
+        [scheme]="hourActivityChart.colorScheme"
+        [results]="hourActivityChart.data"
+        [gradient]="hourActivityChart.gradient"
+        [xAxis]="hourActivityChart.showXAxis"
+        [yAxis]="hourActivityChart.showYAxis"
+        [legend]="hourActivityChart.showLegend"
+        [showXAxisLabel]="hourActivityChart.showXAxisLabel"
+        [showYAxisLabel]="hourActivityChart.showYAxisLabel"
+        [xAxisLabel]="hourActivityChart.xAxisLabel"
+        [yAxisLabel]="hourActivityChart.yAxisLabel"
+        [autoScale]="hourActivityChart.autoScale">
+      </ngx-charts-line-chart>
+    </div>
+  </div>
+</div>

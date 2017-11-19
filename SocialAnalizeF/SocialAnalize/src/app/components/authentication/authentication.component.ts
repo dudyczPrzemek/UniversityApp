@@ -15,17 +15,17 @@ export class AuthenticationComponent {
     private service: AuthenticationService) { }
 
   useFacebookClick() {
-    this.router.navigate(['dashboard']);
+    this.router.navigate(['addpage']);
     this.service.loginUser();
   }
 
   useInstagramClick() {
-    this.router.navigate(['dashboard']);
+    this.router.navigate(['addpage']);
     this.service.loginUser();
   }
 
   useTweeterClick() {
-    this.router.navigate(['dashboard']);
+    this.router.navigate(['addpage']);
     this.service.loginUser();
   }
 }

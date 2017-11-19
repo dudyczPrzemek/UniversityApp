@@ -31,7 +31,7 @@
 
 .followed-user {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding-left: 2em;
     padding-bottom: 1em;
 }
@@ -45,4 +45,26 @@
 .person-name {
     padding-top: 0.5em;
     padding-left: 1em;
+}
+
+.followed-user-analisys {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2em;
+}
+
+.analysis-nav{
+    padding-bottom: 0.4em;
+}
+
+.followed-user-data {
+    padding-bottom: 1em;
+}
+
+.hidden {
+    display: none;
+}
+
+.clickable {
+    cursor: pointer;
 }

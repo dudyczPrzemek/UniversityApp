@@ -13,6 +13,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, APP_INITIALIZER } from '@angular/core';
 import { MatIconModule } from '@angular/material';
 import { AgmCoreModule } from '@agm/core';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 import { AppComponent } from './components/app/app.component';
 import { AuthenticationComponent } from './components/authentication/authentication.component';
@@ -42,7 +43,8 @@ export function appInitializeFactory(iconRegistry: IconRegistry): Function {
     MatIconModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBr3iyBE5CDyJGhg5qJNaXEXJgtqRzY0bg'
-    })
+    }),
+    NgxChartsModule
   ],
   providers: [
     AuthenticationService

@@ -1,6 +1,6 @@
 <div class="side-navbar-root">
   <div class="logged-user-info">
-    <img class="logged-icon-circle" src="../../../assets/images/unknowPerson.jpg"/>
+    <img class="logged-icon-circle" src="https://scontent.fwaw5-1.fna.fbcdn.net/v/t1.0-9/1468814_603637589692879_499809455_n.jpg?oh=68eab80d86d416cead9c1a901ab24a80&oe=5AA839B5"/>
     <div class="user-greeting">Hello Przemek</div>
   </div>
   <div class="side-navbar-content">
@@ -9,16 +9,40 @@
     </div>
     <div class="followed-user-content">
       <div class="followed-user">
-        <img class="person-icon-circle" src="../../../assets/images/unknowPerson.jpg"/>
-        <span class="person-name">Bill Gates</span>
+        <div class="followed-user-data">
+          <img class="person-icon-circle" src="../../../assets/images/unknowPerson.jpg"/>
+          <span class="person-name clickable" (click)="dashboardClick()">Bill Gates</span>
+        </div>
+        <div class="followed-user-analisys">
+          <span class="analysis-nav clickable" (click)="personalDataClick()">Personal data</span>
+          <span class="analysis-nav clickable" (click)="locationClick()">Location</span>
+          <span class="analysis-nav clickable" (click)="activityClick()">Internet activity</span>
+          <span class="analysis-nav clickable" (click)="characterClick()">Character</span>
+        </div>
       </div>
       <div class="followed-user">
-        <img class="person-icon-circle" src="../../../assets/images/unknowPerson.jpg"/>
-        <span class="person-name">Jacek Nowak</span>
+        <div class="followed-user-data">
+          <img class="person-icon-circle" src="../../../assets/images/unknowPerson.jpg"/>
+          <span class="person-name clickable" (click)="dashboardClick()">Jacek Nowak</span>
+        </div>
+        <div class="followed-user-analisys hidden">
+            <span class="analysis-nav clickable" (click)="personalDataClick()">Personal data</span>
+            <span class="analysis-nav clickable" (click)="locationClick()">Location</span>
+            <span class="analysis-nav clickable" (click)="activityClick()">Internet activity</span>
+            <span class="analysis-nav clickable" (click)="characterClick()">Character</span>
+        </div>
       </div>
       <div class="followed-user">
-        <img class="person-icon-circle" src="../../../assets/images/unknowPerson.jpg"/>
-        <span class="person-name">Lionel Messi</span>
+        <div class="followed-user-data">
+          <img class="person-icon-circle" src="../../../assets/images/unknowPerson.jpg"/>
+          <span class="person-name clickable" (click)="dashboardClick()">Lionel Messi</span>
+        </div>
+        <div class="followed-user-analisys hidden">
+            <span class="analysis-nav clickable" (click)="personalDataClick()">Personal data</span>
+            <span class="analysis-nav clickable" (click)="locationClick()">Location</span>
+            <span class="analysis-nav clickable" (click)="activityClick()">Internet activity</span>
+            <span class="analysis-nav clickable" (click)="characterClick()">Character</span>
+        </div>
       </div>
     </div>
   </div>

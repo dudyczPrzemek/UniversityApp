@@ -1,0 +1,9 @@
+D:\STUDIA\NPIS\App\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SAB.Integrator\bin\Debug\netcoreapp2.0\SA.Integrator.deps.json
+D:\STUDIA\NPIS\App\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SAB.Integrator\bin\Debug\netcoreapp2.0\SA.Integrator.dll
+D:\STUDIA\NPIS\App\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SAB.Integrator\bin\Debug\netcoreapp2.0\SA.Integrator.pdb
+D:\STUDIA\NPIS\App\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SAB.Integrator\obj\Debug\netcoreapp2.0\SA.Integrator.csprojResolveAssemblyReference.cache
+D:\STUDIA\NPIS\App\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SAB.Integrator\obj\Debug\netcoreapp2.0\SA.Integrator.csproj.CoreCompileInputs.cache
+D:\STUDIA\NPIS\App\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SAB.Integrator\obj\Debug\netcoreapp2.0\SA.Integrator.AssemblyInfoInputs.cache
+D:\STUDIA\NPIS\App\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SAB.Integrator\obj\Debug\netcoreapp2.0\SA.Integrator.AssemblyInfo.cs
+D:\STUDIA\NPIS\App\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SAB.Integrator\obj\Debug\netcoreapp2.0\SA.Integrator.dll
+D:\STUDIA\NPIS\App\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SAB.Integrator\obj\Debug\netcoreapp2.0\SA.Integrator.pdb
