@@ -11,9 +11,10 @@ using System;
 namespace SA.Backend.Migrations
 {
     [DbContext(typeof(SAContext))]
-    partial class SAContextModelSnapshot : ModelSnapshot
+    [Migration("20171119233400_AddInsta")]
+    partial class AddInsta
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
