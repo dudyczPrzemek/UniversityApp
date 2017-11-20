@@ -16,7 +16,7 @@ namespace SA.Backend.Twitter.User
             var userCreds = AuthFlow.CreateCredentialsFromVerifierCode(authData.OauthVerifier, authData.AuthorizationId);
             var user = Tweetinvi.User.GetAuthenticatedUser(userCreds);
             Auth.SetUserCredentials(userCreds.ConsumerKey, userCreds.ConsumerSecret, userCreds.AccessToken, userCreds.AccessTokenSecret);
-            return Task.FromResult(userCreds.AccessToken);
+            return Task.FromResult("at: " + userCreds.AccessToken + "ats: "+ userCreds.AccessTokenSecret);
         }
     }
 }

@@ -17,6 +17,7 @@ using SA.Contracts.Instagram.User.Queries;
 using SA.Backend.Instagram.User;
 using SA.Contracts.Instagram.User;
 using SA.Contracts.Instagram.User.Commands;
+using SA.Contracts.Twitter;
 
 namespace SA.Backend
 {
@@ -46,6 +47,7 @@ namespace SA.Backend
 
             //TWITTER
             services.RegisterAsyncQueryHandler<GetTwitterAccessToken, string, TwitterUserQueryHandler>();
+            services.RegisterAsyncCommandHandler<RefreshTwitterUserData, TwitterUserCommandHandler>();
 
             //INSTAGRAM
             services.RegisterAsyncQueryHandler<GetInstagramAccessToken, string, InstagramUserQueryHandler>();
@@ -58,6 +60,7 @@ namespace SA.Backend
             services.AddEFCRUDRepository<SAContext, FacebookUser>();
 
             //TWITTER
+            services.AddEFCRUDRepository<SAContext, SearchedTwitterUserData>();
             //INSTAGRAM
             services.AddEFCRUDRepository<SAContext, instagram_media_recent>();
         } 
