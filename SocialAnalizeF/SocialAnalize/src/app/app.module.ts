@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { CharacterAnalizerComponent } from './components/character-analizer/character-analizer.component';
 import { ActivityAnalizerComponent } from './components/activity-analizer/activity-analizer.component';
 import { LocationAnalizerComponent } from './components/location-analizer/location-analizer.component';
@@ -44,7 +45,8 @@ export function appInitializeFactory(iconRegistry: IconRegistry): Function {
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBr3iyBE5CDyJGhg5qJNaXEXJgtqRzY0bg'
     }),
-    NgxChartsModule
+    NgxChartsModule,
+    HttpClientModule
   ],
   providers: [
     AuthenticationService

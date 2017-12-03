@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 export class AuthenticationService {
