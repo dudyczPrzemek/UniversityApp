@@ -20,8 +20,8 @@ export class AuthenticationComponent {
   }
 
   useInstagramClick() {
-    this.router.navigate(['addpage']);
-    this.service.loginUser();
+     // this.router.navigate(['addpage']);
+    this.service.loginInstagramUser();
   }
 
   useTweeterClick() {

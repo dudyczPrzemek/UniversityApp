@@ -1,3 +1,23 @@
-<p>
-  character-analizer works!
-</p>
+<div class="character-root">
+  <div class="character-header">
+    <span class="character-header-content">Character analizer</span>
+  </div>
+  <div class="character-content">
+    <div class="sentiment-chart">
+        <label class="sentiment-chart-header">Sentiment of user opinions:</label>
+        <ngx-charts-bar-vertical
+          [view]="sentimentChartModel.view"
+          [scheme]="sentimentChartModel.colorScheme"
+          [results]="sentimentChartModel.data"
+          [gradient]="sentimentChartModel.gradient"
+          [xAxis]="sentimentChartModel.showXAxis"
+          [yAxis]="sentimentChartModel.showYAxis"
+          [legend]="sentimentChartModel.showLegend"
+          [showXAxisLabel]="sentimentChartModel.showXAxisLabel"
+          [showYAxisLabel]="sentimentChartModel.showYAxisLabel"
+          [xAxisLabel]="sentimentChartModel.xAxisLabel"
+          [yAxisLabel]="sentimentChartModel.yAxisLabel">
+        </ngx-charts-bar-vertical>
+    </div>
+  </div>
+</div>

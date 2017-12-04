@@ -37,7 +37,8 @@ namespace SA.Backend.Twitter.User
                 ConsumerSecret, data.AccessToken,
                 data.AccessTokenSecret);
             var users = Search.SearchUsers("oskar_at_net");
-            return JsonConvert.SerializeObject(users.First());
+            var userTimeline = Timeline.GetUserTimeline(users.First().Id, 100);
+            return JsonConvert.SerializeObject(userTimeline);
         }
     }
 }

@@ -43,14 +43,16 @@ namespace SA.WebApi.Controllers.Instagram
         }
 
         [HttpGet]
-        public string Get(string code)
+        public ActionResult Get(string code)
         {
-            return queryBus.Send<GetInstagramAccessToken, string>(new GetInstagramAccessToken() {
+            var accessToken =  queryBus.Send<GetInstagramAccessToken, string>(new GetInstagramAccessToken() {
                 ClientId = "59012b845588456990c43c91eff4a160",
                 ClientSecretId = "30e266947792420baf3eed7e17260772",
                 Code = code,
                 ReturnUrl = @"http://localhost:50985/api/instagramAuthentication"
             }).Result;
+
+            return Redirect("http://localhost:50985?accessToken=" + accessToken);
         }
     }
 }

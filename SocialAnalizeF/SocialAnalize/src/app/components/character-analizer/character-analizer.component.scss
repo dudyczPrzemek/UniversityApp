@@ -1,0 +1,20 @@
+.character-root{
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+}
+
+.character-header{
+    padding-bottom: 1em;
+}
+
+.character-header-content{
+    font-size: 2em;
+    font-weight: bold;
+}
+
+/deep/{
+    .legend-label-text {
+        color: #000000;
+    }
+}

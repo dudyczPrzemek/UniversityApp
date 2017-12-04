@@ -6,10 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="6.2.1" />
     <PackageReference Include="GoldenEye.Backend.Core" Version="2.1.2" />
     <PackageReference Include="GoldenEye.Backend.Core.DDD" Version="2.1.2" />
