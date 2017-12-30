@@ -52,7 +52,7 @@ namespace SA.WebApi.Controllers.Instagram
                 ReturnUrl = @"http://localhost:50985/api/instagramAuthentication"
             }).Result;
 
-            return Redirect("http://localhost:50985?accessToken=" + accessToken);
+            return Redirect("http://localhost:50985?instagramAccessToken=" + accessToken);
         }
     }
 }

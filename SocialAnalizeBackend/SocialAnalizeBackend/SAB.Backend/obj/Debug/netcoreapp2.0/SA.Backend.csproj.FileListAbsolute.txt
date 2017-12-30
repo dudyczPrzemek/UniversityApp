@@ -9,3 +9,14 @@ D:\STUDIA\NPIS\App\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SAB.B
 D:\STUDIA\NPIS\App\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SAB.Backend\obj\Debug\netcoreapp2.0\SA.Backend.csprojResolveAssemblyReference.cache
 D:\STUDIA\NPIS\App\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SAB.Backend\obj\Debug\netcoreapp2.0\SA.Backend.dll
 D:\STUDIA\NPIS\App\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SAB.Backend\obj\Debug\netcoreapp2.0\SA.Backend.pdb
+C:\MySpace\University\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SAB.Backend\obj\Debug\netcoreapp2.0\SA.Backend.csprojResolveAssemblyReference.cache
+C:\MySpace\University\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SAB.Backend\obj\Debug\netcoreapp2.0\SA.Backend.csproj.CoreCompileInputs.cache
+C:\MySpace\University\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SAB.Backend\obj\Debug\netcoreapp2.0\SA.Backend.AssemblyInfoInputs.cache
+C:\MySpace\University\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SAB.Backend\obj\Debug\netcoreapp2.0\SA.Backend.AssemblyInfo.cs
+C:\MySpace\University\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SAB.Backend\bin\Debug\netcoreapp2.0\SA.Backend.deps.json
+C:\MySpace\University\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SAB.Backend\bin\Debug\netcoreapp2.0\SA.Backend.dll
+C:\MySpace\University\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SAB.Backend\bin\Debug\netcoreapp2.0\SA.Backend.pdb
+C:\MySpace\University\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SAB.Backend\bin\Debug\netcoreapp2.0\SA.Contracts.dll
+C:\MySpace\University\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SAB.Backend\bin\Debug\netcoreapp2.0\SA.Contracts.pdb
+C:\MySpace\University\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SAB.Backend\obj\Debug\netcoreapp2.0\SA.Backend.dll
+C:\MySpace\University\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SAB.Backend\obj\Debug\netcoreapp2.0\SA.Backend.pdb

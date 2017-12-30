@@ -7316,7 +7316,7 @@
       ]
     },
     "System.Runtime.Serialization.Formatters/4.3.0": {
-      "sha512": "vesqKqbhdwBrX0AHG5m9y/VVzUDU7nq40ES8/j76bj812KWE+Kh7fihUwjxDACG8fiai1MFO1MyWgz+bC6VfmQ==",
+      "sha512": "KT591AkTNFOTbhZlaeMVvfax3RqhH1EJlcwF50Wm7sfnBLuHiOeZRRKrr1ns3NESkM20KPZ5Ol/ueMq5vg4QoQ==",
       "type": "package",
       "path": "system.runtime.serialization.formatters/4.3.0",
       "files": [
@@ -7804,7 +7804,7 @@
       ]
     },
     "System.Text.Encoding.CodePages/4.3.0": {
-      "sha512": "p87/YaQxC8WTEMD6OSY72DPxV00h1XHZZYSyQOGKn4hOZmX4sRUeY529R0mmM6qm1Ik8Rt+CXU+nZylu6Ytr+g==",
+      "sha512": "IRiEFUa5b/Gs5Egg8oqBVoywhtOeaO2KOx3j0RfcYY/raxqBuEK7NXRDgOwtYM8qbi+7S4RPXUbNt+ZxyY0/NQ==",
       "type": "package",
       "path": "system.text.encoding.codepages/4.3.0",
       "files": [
@@ -8530,6 +8530,7 @@
   },
   "packageFolders": {
     "C:\\Users\\Przemek\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -8538,18 +8539,20 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "D:\\STUDIA\\NPIS\\App\\UniversityApp\\SocialAnalizeBackend\\SocialAnalizeBackend\\SAB.Integrator\\SA.Integrator.csproj",
+      "projectUniqueName": "C:\\MySpace\\University\\UniversityApp\\SocialAnalizeBackend\\SocialAnalizeBackend\\SAB.Integrator\\SA.Integrator.csproj",
       "projectName": "SA.Integrator",
-      "projectPath": "D:\\STUDIA\\NPIS\\App\\UniversityApp\\SocialAnalizeBackend\\SocialAnalizeBackend\\SAB.Integrator\\SA.Integrator.csproj",
+      "projectPath": "C:\\MySpace\\University\\UniversityApp\\SocialAnalizeBackend\\SocialAnalizeBackend\\SAB.Integrator\\SA.Integrator.csproj",
       "packagesPath": "C:\\Users\\Przemek\\.nuget\\packages\\",
-      "outputPath": "D:\\STUDIA\\NPIS\\App\\UniversityApp\\SocialAnalizeBackend\\SocialAnalizeBackend\\SAB.Integrator\\obj\\",
+      "outputPath": "C:\\MySpace\\University\\UniversityApp\\SocialAnalizeBackend\\SocialAnalizeBackend\\SAB.Integrator\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
         "C:\\Users\\Przemek\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
@@ -8572,27 +8575,27 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
+          "AutoMapper": {
+            "target": "Package",
+            "version": "[6.2.1, )"
+          },
+          "GoldenEye.Backend.Core": {
+            "target": "Package",
+            "version": "[2.1.2, )"
+          },
+          "GoldenEye.Backend.Core.DDD": {
+            "target": "Package",
+            "version": "[2.1.2, )"
+          },
           "GoldenEye.Backend.Core.WebApi": {
             "target": "Package",
-            "version": "2.1.2"
+            "version": "[2.1.2, )"
           },
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "2.0.0",
+            "version": "[2.0.0, )",
             "autoReferenced": true
-          },
-          "AutoMapper": {
-            "target": "Package",
-            "version": "6.2.1"
-          },
-          "GoldenEye.Backend.Core": {
-            "target": "Package",
-            "version": "2.1.2"
-          },
-          "GoldenEye.Backend.Core.DDD": {
-            "target": "Package",
-            "version": "2.1.2"
           }
         },
         "imports": [

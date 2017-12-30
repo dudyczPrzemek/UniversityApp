@@ -37,6 +37,7 @@
     "angular-svg-round-progressbar": "1.1.0",
     "angular2-moment": "1.7.0",
     "aws-sign-web": "1.2.2",
+    "bootstrap": "^3.3.7",
     "classlist.js": "1.1.20150312",
     "core-js": "2.5.1",
     "d3": "^4.11.0",

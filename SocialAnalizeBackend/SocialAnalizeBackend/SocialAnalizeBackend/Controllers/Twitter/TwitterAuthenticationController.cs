@@ -33,13 +33,15 @@ namespace SA.WebApi.Controllers.Twitter
         }
 
         [HttpGet]
-        public string Get(string authorization_id, string oauth_token, string oauth_verifier)
+        public ActionResult Get(string authorization_id, string oauth_token, string oauth_verifier)
         {
-            return queryBus.Send<GetTwitterAccessToken, string>(new GetTwitterAccessToken() {
+            var accessToken = queryBus.Send<GetTwitterAccessToken, string>(new GetTwitterAccessToken() {
                 AuthorizationId = authorization_id,
                 OauthToken = oauth_token,
                 OauthVerifier = oauth_verifier
             }).Result;
+
+            return Redirect("http://localhost:50985?twitterAccessToken=" + accessToken);
         }
     }
 }

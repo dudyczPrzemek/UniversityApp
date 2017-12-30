@@ -16,8 +16,6 @@ namespace SA.Backend.DB
 
         public virtual DbSet<FacebookUser> FacebookUser { get; set; }
         public virtual DbSet<instagram_media_recent> instagram_media_recent { get; set; }
-
-        public virtual DbSet<>
         public virtual DbSet<SearchedTwitterUserData> twitter_searched_user_data  { get; set; }
     }
 }

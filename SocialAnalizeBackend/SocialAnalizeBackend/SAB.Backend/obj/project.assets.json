@@ -5026,7 +5026,7 @@
       ]
     },
     "Remotion.Linq/2.1.1": {
-      "sha512": "6jkPe+f/RfkSUW715CyXFe8Xv/4H0cpaU7YwIoNWDOLAyk5vTjr7oEdV6Hb8S1qPGHFE+zn0CsL+1wDClvAW7Q==",
+      "sha512": "IJn0BqkvwEDpP+2qjvci7n4/a9f7DhKESLWb2/uG4xQh3rTkGTBUz69bI4IivCoKkTFAqjXxYDZw2K/npohjsw==",
       "type": "package",
       "path": "remotion.linq/2.1.1",
       "files": [
@@ -7902,7 +7902,7 @@
       ]
     },
     "System.Runtime.Serialization.Formatters/4.3.0": {
-      "sha512": "vesqKqbhdwBrX0AHG5m9y/VVzUDU7nq40ES8/j76bj812KWE+Kh7fihUwjxDACG8fiai1MFO1MyWgz+bC6VfmQ==",
+      "sha512": "KT591AkTNFOTbhZlaeMVvfax3RqhH1EJlcwF50Wm7sfnBLuHiOeZRRKrr1ns3NESkM20KPZ5Ol/ueMq5vg4QoQ==",
       "type": "package",
       "path": "system.runtime.serialization.formatters/4.3.0",
       "files": [
@@ -8390,7 +8390,7 @@
       ]
     },
     "System.Text.Encoding.CodePages/4.3.0": {
-      "sha512": "p87/YaQxC8WTEMD6OSY72DPxV00h1XHZZYSyQOGKn4hOZmX4sRUeY529R0mmM6qm1Ik8Rt+CXU+nZylu6Ytr+g==",
+      "sha512": "IRiEFUa5b/Gs5Egg8oqBVoywhtOeaO2KOx3j0RfcYY/raxqBuEK7NXRDgOwtYM8qbi+7S4RPXUbNt+ZxyY0/NQ==",
       "type": "package",
       "path": "system.text.encoding.codepages/4.3.0",
       "files": [
@@ -9183,6 +9183,7 @@
   },
   "packageFolders": {
     "C:\\Users\\Przemek\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -9191,18 +9192,20 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "D:\\STUDIA\\NPIS\\App\\UniversityApp\\SocialAnalizeBackend\\SocialAnalizeBackend\\SAB.Backend\\SA.Backend.csproj",
+      "projectUniqueName": "C:\\MySpace\\University\\UniversityApp\\SocialAnalizeBackend\\SocialAnalizeBackend\\SAB.Backend\\SA.Backend.csproj",
       "projectName": "SA.Backend",
-      "projectPath": "D:\\STUDIA\\NPIS\\App\\UniversityApp\\SocialAnalizeBackend\\SocialAnalizeBackend\\SAB.Backend\\SA.Backend.csproj",
+      "projectPath": "C:\\MySpace\\University\\UniversityApp\\SocialAnalizeBackend\\SocialAnalizeBackend\\SAB.Backend\\SA.Backend.csproj",
       "packagesPath": "C:\\Users\\Przemek\\.nuget\\packages\\",
-      "outputPath": "D:\\STUDIA\\NPIS\\App\\UniversityApp\\SocialAnalizeBackend\\SocialAnalizeBackend\\SAB.Backend\\obj\\",
+      "outputPath": "C:\\MySpace\\University\\UniversityApp\\SocialAnalizeBackend\\SocialAnalizeBackend\\SAB.Backend\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
         "C:\\Users\\Przemek\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
@@ -9214,8 +9217,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "D:\\STUDIA\\NPIS\\App\\UniversityApp\\SocialAnalizeBackend\\SocialAnalizeBackend\\SAB.Contracts\\SA.Contracts.csproj": {
-              "projectPath": "D:\\STUDIA\\NPIS\\App\\UniversityApp\\SocialAnalizeBackend\\SocialAnalizeBackend\\SAB.Contracts\\SA.Contracts.csproj"
+            "C:\\MySpace\\University\\UniversityApp\\SocialAnalizeBackend\\SocialAnalizeBackend\\SAB.Contracts\\SA.Contracts.csproj": {
+              "projectPath": "C:\\MySpace\\University\\UniversityApp\\SocialAnalizeBackend\\SocialAnalizeBackend\\SAB.Contracts\\SA.Contracts.csproj"
             }
           }
         }
@@ -9229,47 +9232,47 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
-          "Npgsql.EntityFrameworkCore.PostgreSQL": {
+          "AutoMapper": {
             "target": "Package",
-            "version": "2.0.0"
+            "version": "[6.2.1, )"
           },
-          "Microsoft.EntityFrameworkCore": {
+          "GoldenEye.Backend.Core": {
             "target": "Package",
-            "version": "2.0.1"
+            "version": "[2.1.2, )"
           },
-          "Microsoft.EntityFrameworkCore.Tools": {
+          "GoldenEye.Backend.Core.DDD": {
             "target": "Package",
-            "version": "2.0.1"
+            "version": "[2.1.2, )"
+          },
+          "GoldenEye.Backend.Core.EntityFramework": {
+            "target": "Package",
+            "version": "[2.1.2, )"
           },
           "GoldenEye.Backend.Core.WebApi": {
             "target": "Package",
-            "version": "2.1.2"
+            "version": "[2.1.2, )"
+          },
+          "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[2.0.1, )"
+          },
+          "Microsoft.EntityFrameworkCore.Tools": {
+            "target": "Package",
+            "version": "[2.0.1, )"
           },
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "2.0.0",
+            "version": "[2.0.0, )",
             "autoReferenced": true
           },
-          "AutoMapper": {
+          "Npgsql.EntityFrameworkCore.PostgreSQL": {
             "target": "Package",
-            "version": "6.2.1"
-          },
-          "GoldenEye.Backend.Core": {
-            "target": "Package",
-            "version": "2.1.2"
-          },
-          "GoldenEye.Backend.Core.DDD": {
-            "target": "Package",
-            "version": "2.1.2"
-          },
-          "GoldenEye.Backend.Core.EntityFramework": {
-            "target": "Package",
-            "version": "2.1.2"
+            "version": "[2.0.0, )"
           },
           "TweetinviAPI": {
             "target": "Package",
-            "version": "2.1.0"
+            "version": "[2.1.0, )"
           }
         },
         "imports": [

@@ -29,15 +29,17 @@ namespace SA.WebApi.Controllers.Facebook
         }
 
         [HttpGet]
-        public string Get(string code)
+        public ActionResult Get(string code)
         {
-            return queryBus.Send<GetFacebookAccessToken, string>(new GetFacebookAccessToken()
+            var accessToken =  queryBus.Send<GetFacebookAccessToken, string>(new GetFacebookAccessToken()
             {
                 Code = code,
                 ApplicationId = "1578280192264123",
                 ApplicationSecret = "9993276c6b0cc628133d7c397a178305",
                 RedirectUrl = @"http://localhost:50985/api/facebookAuthentication"
             }).Result;
+
+            return Redirect("http://localhost:50985?facebookAccessToken=" + accessToken);
         }
 
         

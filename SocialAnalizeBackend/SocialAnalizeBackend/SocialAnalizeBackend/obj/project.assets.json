@@ -8186,7 +8186,7 @@
       ]
     },
     "Remotion.Linq/2.1.1": {
-      "sha512": "6jkPe+f/RfkSUW715CyXFe8Xv/4H0cpaU7YwIoNWDOLAyk5vTjr7oEdV6Hb8S1qPGHFE+zn0CsL+1wDClvAW7Q==",
+      "sha512": "IJn0BqkvwEDpP+2qjvci7n4/a9f7DhKESLWb2/uG4xQh3rTkGTBUz69bI4IivCoKkTFAqjXxYDZw2K/npohjsw==",
       "type": "package",
       "path": "remotion.linq/2.1.1",
       "files": [
@@ -10486,7 +10486,7 @@
       ]
     },
     "System.Net.Security/4.3.0": {
-      "sha512": "/MiY5/wJRjve0e5Lsknnbe/2KedIa8SYg/gK2VjHGT9xo3U+6v8k3KiOOuPoH27YIxZJZPSMLk4q7XYrnVbV6Q==",
+      "sha512": "IgJKNfALqw7JRWp5LMQ5SWHNKvXVz094U6wNE3c1i8bOkMQvgBL+MMQuNt3xl9Qg9iWpj3lFxPZEY6XHmROjMQ==",
       "type": "package",
       "path": "system.net.security/4.3.0",
       "files": [
@@ -11537,7 +11537,7 @@
       ]
     },
     "System.Runtime.Serialization.Formatters/4.3.0": {
-      "sha512": "vesqKqbhdwBrX0AHG5m9y/VVzUDU7nq40ES8/j76bj812KWE+Kh7fihUwjxDACG8fiai1MFO1MyWgz+bC6VfmQ==",
+      "sha512": "KT591AkTNFOTbhZlaeMVvfax3RqhH1EJlcwF50Wm7sfnBLuHiOeZRRKrr1ns3NESkM20KPZ5Ol/ueMq5vg4QoQ==",
       "type": "package",
       "path": "system.runtime.serialization.formatters/4.3.0",
       "files": [
@@ -13256,6 +13256,7 @@
   },
   "packageFolders": {
     "C:\\Users\\Przemek\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -13264,18 +13265,20 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "D:\\STUDIA\\NPIS\\App\\UniversityApp\\SocialAnalizeBackend\\SocialAnalizeBackend\\SocialAnalizeBackend\\SA.WebApi.csproj",
+      "projectUniqueName": "C:\\MySpace\\University\\UniversityApp\\SocialAnalizeBackend\\SocialAnalizeBackend\\SocialAnalizeBackend\\SA.WebApi.csproj",
       "projectName": "SA.WebApi",
-      "projectPath": "D:\\STUDIA\\NPIS\\App\\UniversityApp\\SocialAnalizeBackend\\SocialAnalizeBackend\\SocialAnalizeBackend\\SA.WebApi.csproj",
+      "projectPath": "C:\\MySpace\\University\\UniversityApp\\SocialAnalizeBackend\\SocialAnalizeBackend\\SocialAnalizeBackend\\SA.WebApi.csproj",
       "packagesPath": "C:\\Users\\Przemek\\.nuget\\packages\\",
-      "outputPath": "D:\\STUDIA\\NPIS\\App\\UniversityApp\\SocialAnalizeBackend\\SocialAnalizeBackend\\SocialAnalizeBackend\\obj\\",
+      "outputPath": "C:\\MySpace\\University\\UniversityApp\\SocialAnalizeBackend\\SocialAnalizeBackend\\SocialAnalizeBackend\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
         "C:\\Users\\Przemek\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
@@ -13287,11 +13290,11 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "D:\\STUDIA\\NPIS\\App\\UniversityApp\\SocialAnalizeBackend\\SocialAnalizeBackend\\SAB.Backend\\SA.Backend.csproj": {
-              "projectPath": "D:\\STUDIA\\NPIS\\App\\UniversityApp\\SocialAnalizeBackend\\SocialAnalizeBackend\\SAB.Backend\\SA.Backend.csproj"
+            "C:\\MySpace\\University\\UniversityApp\\SocialAnalizeBackend\\SocialAnalizeBackend\\SAB.Contracts\\SA.Contracts.csproj": {
+              "projectPath": "C:\\MySpace\\University\\UniversityApp\\SocialAnalizeBackend\\SocialAnalizeBackend\\SAB.Contracts\\SA.Contracts.csproj"
             },
-            "D:\\STUDIA\\NPIS\\App\\UniversityApp\\SocialAnalizeBackend\\SocialAnalizeBackend\\SAB.Contracts\\SA.Contracts.csproj": {
-              "projectPath": "D:\\STUDIA\\NPIS\\App\\UniversityApp\\SocialAnalizeBackend\\SocialAnalizeBackend\\SAB.Contracts\\SA.Contracts.csproj"
+            "C:\\MySpace\\University\\UniversityApp\\SocialAnalizeBackend\\SocialAnalizeBackend\\SAB.Backend\\SA.Backend.csproj": {
+              "projectPath": "C:\\MySpace\\University\\UniversityApp\\SocialAnalizeBackend\\SocialAnalizeBackend\\SAB.Backend\\SA.Backend.csproj"
             }
           }
         }
@@ -13305,38 +13308,38 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
-          "GoldenEye.Backend.Core.WebApi": {
-            "target": "Package",
-            "version": "2.1.2"
-          },
-          "Microsoft.NETCore.App": {
-            "target": "Package",
-            "version": "2.0.0",
-            "autoReferenced": true
-          },
           "AutoMapper": {
             "target": "Package",
-            "version": "6.2.1"
-          },
-          "InstaSharp": {
-            "target": "Package",
-            "version": "2.0.6"
+            "version": "[6.2.1, )"
           },
           "GoldenEye.Backend.Core": {
             "target": "Package",
-            "version": "2.1.2"
-          },
-          "Microsoft.AspNetCore.All": {
-            "target": "Package",
-            "version": "2.0.0"
+            "version": "[2.1.2, )"
           },
           "GoldenEye.Backend.Core.DDD": {
             "target": "Package",
-            "version": "2.1.2"
+            "version": "[2.1.2, )"
+          },
+          "GoldenEye.Backend.Core.WebApi": {
+            "target": "Package",
+            "version": "[2.1.2, )"
+          },
+          "InstaSharp": {
+            "target": "Package",
+            "version": "[2.0.6, )"
+          },
+          "Microsoft.AspNetCore.All": {
+            "target": "Package",
+            "version": "[2.0.0, )"
+          },
+          "Microsoft.NETCore.App": {
+            "target": "Package",
+            "version": "[2.0.0, )",
+            "autoReferenced": true
           },
           "TweetinviAPI": {
             "target": "Package",
-            "version": "2.1.0"
+            "version": "[2.1.0, )"
           }
         },
         "imports": [

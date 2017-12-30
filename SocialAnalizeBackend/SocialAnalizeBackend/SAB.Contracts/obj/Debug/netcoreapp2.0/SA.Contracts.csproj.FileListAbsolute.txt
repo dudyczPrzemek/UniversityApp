@@ -7,3 +7,12 @@ D:\STUDIA\NPIS\App\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SAB.C
 D:\STUDIA\NPIS\App\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SAB.Contracts\bin\Debug\netcoreapp2.0\SA.Contracts.pdb
 D:\STUDIA\NPIS\App\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SAB.Contracts\obj\Debug\netcoreapp2.0\SA.Contracts.dll
 D:\STUDIA\NPIS\App\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SAB.Contracts\obj\Debug\netcoreapp2.0\SA.Contracts.pdb
+C:\MySpace\University\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SAB.Contracts\bin\Debug\netcoreapp2.0\SA.Contracts.deps.json
+C:\MySpace\University\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SAB.Contracts\bin\Debug\netcoreapp2.0\SA.Contracts.dll
+C:\MySpace\University\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SAB.Contracts\bin\Debug\netcoreapp2.0\SA.Contracts.pdb
+C:\MySpace\University\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SAB.Contracts\obj\Debug\netcoreapp2.0\SA.Contracts.csprojResolveAssemblyReference.cache
+C:\MySpace\University\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SAB.Contracts\obj\Debug\netcoreapp2.0\SA.Contracts.csproj.CoreCompileInputs.cache
+C:\MySpace\University\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SAB.Contracts\obj\Debug\netcoreapp2.0\SA.Contracts.AssemblyInfoInputs.cache
+C:\MySpace\University\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SAB.Contracts\obj\Debug\netcoreapp2.0\SA.Contracts.AssemblyInfo.cs
+C:\MySpace\University\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SAB.Contracts\obj\Debug\netcoreapp2.0\SA.Contracts.dll
+C:\MySpace\University\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SAB.Contracts\obj\Debug\netcoreapp2.0\SA.Contracts.pdb
