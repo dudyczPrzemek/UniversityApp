@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using Tweetinvi;
+using Tweetinvi.Models;
 
 namespace SA.Backend.Twitter.User
 {
@@ -13,10 +14,10 @@ namespace SA.Backend.Twitter.User
     {
         public Task<string> Handle(GetTwitterAccessToken authData)
         {
-            var userCreds = AuthFlow.CreateCredentialsFromVerifierCode(authData.OauthVerifier, authData.AuthorizationId);
-            var user = Tweetinvi.User.GetAuthenticatedUser(userCreds);
-            Auth.SetUserCredentials(userCreds.ConsumerKey, userCreds.ConsumerSecret, userCreds.AccessToken, userCreds.AccessTokenSecret);
-            return Task.FromResult("at: " + userCreds.AccessToken + "ats: "+ userCreds.AccessTokenSecret);
+            TwitterGlobal.UserCredentials = AuthFlow.CreateCredentialsFromVerifierCode(authData.OauthVerifier, authData.AuthorizationId);
+            var user = Tweetinvi.User.GetAuthenticatedUser(TwitterGlobal.UserCredentials);
+            Auth.SetUserCredentials(TwitterGlobal.UserCredentials.ConsumerKey, TwitterGlobal.UserCredentials.ConsumerSecret, TwitterGlobal.UserCredentials.AccessToken, TwitterGlobal.UserCredentials.AccessTokenSecret);
+            return Task.FromResult("at: " + TwitterGlobal.UserCredentials.AccessToken + "ats: "+ TwitterGlobal.UserCredentials.AccessTokenSecret);
         }
     }
 }

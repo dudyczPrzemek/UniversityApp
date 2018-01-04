@@ -41,7 +41,5 @@ namespace SA.WebApi.Controllers.Facebook
 
             return Redirect("http://localhost:50985?facebookAccessToken=" + accessToken);
         }
-
-        
     }
 }

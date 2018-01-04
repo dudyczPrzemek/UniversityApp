@@ -138,7 +138,7 @@ var AppModule = (function () {
                 }),
                 __WEBPACK_IMPORTED_MODULE_16__swimlane_ngx_charts__["NgxChartsModule"],
                 __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClientModule */],
-                __WEBPACK_IMPORTED_MODULE_0__angular_http__["b" /* HttpModule */]
+                __WEBPACK_IMPORTED_MODULE_0__angular_http__["c" /* HttpModule */]
             ],
             providers: [
                 __WEBPACK_IMPORTED_MODULE_8__services_authentication_authentication_service__["a" /* AuthenticationService */]
@@ -376,7 +376,7 @@ var ActivityAnalizerComponent = (function () {
 /***/ "../../../../../src/app/components/add-start-page/add-start-page.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"add-page-root\">\n  <span class=\"add-text\">Add followed user</span>\n</div>"
+module.exports = "<div class=\"add-user-root\">\n  <div class=\"add-user-header\">\n    <span class=\"add-user-header-content\">Add followed user</span>\n  </div>\n  <div class=\"add-user-content\">\n    <div class=\"search-div\">\n      <input class=\"user-id-input\" type=\"text\" #userId/>\n      <button id=\"search-btn\" class=\"search-btn\" (click)=\"searchClick(userId.value)\">Search</button>\n    </div>\n    <div class=\"result-list\">\n      <!-- <div class=\"user-data\">\n        <img class=\"user-icon-circle\" src=\"https://scontent.fwaw5-1.fna.fbcdn.net/v/t1.0-1/c0.0.240.240/p240x240/1468814_603637589692879_499809455_n.jpg?oh=e6680bc1e47266310469b5dd6f67751b&oe=5AF5B084\"/>\n        <div class=\"user-name\">Przemek Dudycz, Legnica - Facebook</div>\n      </div>\n      <div class=\"user-data\">\n        <img class=\"user-icon-circle\" src=\"https://scontent.fwaw5-1.fna.fbcdn.net/v/t1.0-1/c0.0.240.240/p240x240/1468814_603637589692879_499809455_n.jpg?oh=e6680bc1e47266310469b5dd6f67751b&oe=5AF5B084\"/>\n        <div class=\"user-name\">Przemek Dudycz, Legnica - Facebook</div>\n      </div> -->\n      <div class=\"userData\" *ngFor=\"let user of searchedUserArray\" (dblclick)=\"onUserDblClick(user)\">\n        <img class=\"user-icon-circle\" src=\"https://i.kinja-img.com/gawker-media/image/upload/s--3lzma_MB--/c_fit,fl_progressive,q_80,w_320/18bdwssyxpibxjpg.jpg\"/>\n        <div class=\"user-name\">{{user.fullName}} - Facebook</div>\n      </div>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -388,7 +388,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".add-page-root {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  width: 100%;\n  height: 100%; }\n\n.add-text {\n  font-size: 4em; }\n", ""]);
+exports.push([module.i, ".add-user-root {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  padding: 2em; }\n\n.add-user-header-content {\n  font-size: 2em;\n  font-weight: bold; }\n\n.add-user-content {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  padding-top: 5em; }\n\n.user-data {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n  padding: 1em;\n  -webkit-box-flex: 0;\n      -ms-flex: 0 20%;\n          flex: 0 20%;\n  font-weight: bold;\n  background-color: rgba(49, 48, 48, 0.11);\n  max-height: 29em; }\n\n.user-icon-circle {\n  height: 5em;\n  width: 5em;\n  border-radius: 50%;\n  margin-right: 1em; }\n\n.search-div {\n  width: 50em; }\n\n.user-id-input {\n  width: 40em; }\n\n.search-btn {\n  width: 9.65em; }\n\n.result-list {\n  border: 0.1em solid black;\n  width: 50em;\n  height: 30em;\n  max-height: 30em;\n  overflow-y: scroll; }\n", ""]);
 
 // exports
 
@@ -404,6 +404,8 @@ module.exports = module.exports.toString();
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddStartPageComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_authentication_authentication_service__ = __webpack_require__("../../../../../src/app/services/authentication/authentication.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -414,10 +416,42 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
 var AddStartPageComponent = (function () {
-    function AddStartPageComponent() {
+    function AddStartPageComponent(authService, http) {
+        this.authService = authService;
+        this.http = http;
+        this.searchedUserArray = [];
     }
     AddStartPageComponent.prototype.ngOnInit = function () {
+    };
+    AddStartPageComponent.prototype.searchClick = function (userId) {
+        var _this = this;
+        var accessTokens = this.authService.getAccessTokens();
+        var baseUrl = 'http://localhost:50985/api/searchUser';
+        var userIdUrlPart = "userId=" + userId;
+        var facebookUrlPart = "facebookAccessToken=" + accessTokens.Facebook;
+        var instagramUrlPart = "instagramAccessToken=" + accessTokens.Instagram;
+        var twitterUrlPart = "twitterAccessToken=" + accessTokens.Twitter;
+        this.http.get("http://localhost:50985/api/searchUser?" + userIdUrlPart + "&" + facebookUrlPart + "&" + instagramUrlPart + "&" + twitterUrlPart)
+            .subscribe(function (result) {
+            var searchResult = result.json();
+            _this.searchedUserArray = searchResult.searchedUsers;
+        });
+    };
+    AddStartPageComponent.prototype.onUserDblClick = function (userModel) {
+        var postBody = JSON.stringify(userModel);
+        debugger;
+        var postHeaders = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Headers */]();
+        postHeaders.append('Accept', 'application/json');
+        postHeaders.append('Content-Type', 'application/json');
+        var options = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["d" /* RequestOptions */]({ headers: postHeaders });
+        this.http.post("http://localhost:50985/api/searchUser", userModel, options)
+            .subscribe((function (result) {
+            console.log("abc");
+            debugger;
+        }));
     };
     AddStartPageComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -425,9 +459,10 @@ var AddStartPageComponent = (function () {
             template: __webpack_require__("../../../../../src/app/components/add-start-page/add-start-page.component.html"),
             styles: [__webpack_require__("../../../../../src/app/components/add-start-page/add-start-page.component.scss")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_authentication_authentication_service__["a" /* AuthenticationService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_authentication_authentication_service__["a" /* AuthenticationService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */]) === "function" && _b || Object])
     ], AddStartPageComponent);
     return AddStartPageComponent;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=add-start-page.component.js.map
@@ -563,15 +598,15 @@ var AuthenticationComponent = (function () {
             var instagramAccessToken = params['instagramAccessToken'];
             var twitterAccessToken = params['twitterAccessToken'];
             if (facebookAccessToken) {
-                _this.service.loginUser('facebookAccessToken', facebookAccessToken);
+                _this.service.loginUser(facebookAccessToken, 'facebook');
                 _this.router.navigate(['addpage']);
             }
             if (instagramAccessToken) {
-                _this.service.loginUser('instagramAccessToken', instagramAccessToken);
+                _this.service.loginUser(instagramAccessToken, 'instagram');
                 _this.router.navigate(['addpage']);
             }
             if (twitterAccessToken) {
-                _this.service.loginUser('twitterAccessToken', twitterAccessToken);
+                _this.service.loginUser(twitterAccessToken, 'twitter');
                 _this.router.navigate(['addpage']);
             }
         });
@@ -1015,6 +1050,21 @@ var TopNavigationComponent = (function () {
 
 /***/ }),
 
+/***/ "../../../../../src/app/models/access.token.model.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AccessTokens; });
+var AccessTokens = (function () {
+    function AccessTokens() {
+    }
+    return AccessTokens;
+}());
+
+//# sourceMappingURL=access.token.model.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/models/chart/chart.model.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1039,6 +1089,7 @@ var ChartModel = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("../../../common/@angular/common/http.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_BehaviorSubject__ = __webpack_require__("../../../../rxjs/BehaviorSubject.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_BehaviorSubject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_BehaviorSubject__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_access_token_model__ = __webpack_require__("../../../../../src/app/models/access.token.model.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1048,6 +1099,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -1067,13 +1119,20 @@ var AuthenticationService = (function () {
         localStorage.setItem(socialMediaType + "AccessToken", accessToken);
     };
     AuthenticationService.prototype.getCurrentFacebookAccessToken = function () {
-        return localStorage.getItem('FacebookAccessToken');
+        return localStorage.getItem('facebookAccessToken');
     };
     AuthenticationService.prototype.getCurrentInstagramAccessToken = function () {
-        return localStorage.getItem('InstagramAccessToken');
+        return localStorage.getItem('instagramAccessToken');
     };
     AuthenticationService.prototype.getCurrentTwitterAccessToken = function () {
-        return localStorage.getItem('TwitterAccessToken');
+        return localStorage.getItem('twitterAccessToken');
+    };
+    AuthenticationService.prototype.getAccessTokens = function () {
+        var accessTokensModel = new __WEBPACK_IMPORTED_MODULE_3__models_access_token_model__["a" /* AccessTokens */]();
+        accessTokensModel.Facebook = this.getCurrentFacebookAccessToken();
+        accessTokensModel.Instagram = this.getCurrentInstagramAccessToken();
+        accessTokensModel.Twitter = this.getCurrentTwitterAccessToken();
+        return accessTokensModel;
     };
     AuthenticationService.prototype.loginInstagramUser = function () {
         window.location.href = 'http://localhost:50985/api/instagramAuthentication/authenticate';

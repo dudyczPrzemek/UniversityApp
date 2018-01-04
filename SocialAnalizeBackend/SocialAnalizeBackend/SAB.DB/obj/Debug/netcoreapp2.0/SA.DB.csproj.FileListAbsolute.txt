@@ -7,12 +7,3 @@ D:\STUDIA\NPIS\App\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SAB.D
 D:\STUDIA\NPIS\App\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SAB.DB\obj\Debug\netcoreapp2.0\SA.DB.AssemblyInfo.cs
 D:\STUDIA\NPIS\App\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SAB.DB\obj\Debug\netcoreapp2.0\SA.DB.dll
 D:\STUDIA\NPIS\App\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SAB.DB\obj\Debug\netcoreapp2.0\SA.DB.pdb
-C:\MySpace\University\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SAB.DB\bin\Debug\netcoreapp2.0\SA.DB.deps.json
-C:\MySpace\University\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SAB.DB\bin\Debug\netcoreapp2.0\SA.DB.dll
-C:\MySpace\University\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SAB.DB\bin\Debug\netcoreapp2.0\SA.DB.pdb
-C:\MySpace\University\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SAB.DB\obj\Debug\netcoreapp2.0\SA.DB.csprojResolveAssemblyReference.cache
-C:\MySpace\University\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SAB.DB\obj\Debug\netcoreapp2.0\SA.DB.csproj.CoreCompileInputs.cache
-C:\MySpace\University\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SAB.DB\obj\Debug\netcoreapp2.0\SA.DB.AssemblyInfoInputs.cache
-C:\MySpace\University\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SAB.DB\obj\Debug\netcoreapp2.0\SA.DB.AssemblyInfo.cs
-C:\MySpace\University\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SAB.DB\obj\Debug\netcoreapp2.0\SA.DB.dll
-C:\MySpace\University\UniversityApp\SocialAnalizeBackend\SocialAnalizeBackend\SAB.DB\obj\Debug\netcoreapp2.0\SA.DB.pdb

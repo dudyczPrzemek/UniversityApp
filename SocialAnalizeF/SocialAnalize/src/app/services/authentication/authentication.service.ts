@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { AccessTokens } from '../../models/access.token.model';
 
 @Injectable()
 export class AuthenticationService {
@@ -12,7 +13,6 @@ export class AuthenticationService {
         const facebookAccessToken = this.getCurrentFacebookAccessToken();
         const instagramAccessToken = this.getCurrentInstagramAccessToken();
         const twitterAccessToken = this.getCurrentTwitterAccessToken();
-
         return facebookAccessToken !== null || instagramAccessToken !== null || twitterAccessToken !== null;
     }
 
@@ -22,15 +22,23 @@ export class AuthenticationService {
     }
 
     getCurrentFacebookAccessToken() {
-        return localStorage.getItem('FacebookAccessToken');
+        return localStorage.getItem('facebookAccessToken');
     }
 
     getCurrentInstagramAccessToken() {
-        return localStorage.getItem('InstagramAccessToken');
+        return localStorage.getItem('instagramAccessToken');
     }
 
     getCurrentTwitterAccessToken() {
-        return localStorage.getItem('TwitterAccessToken');
+        return localStorage.getItem('twitterAccessToken');
+    }
+
+    getAccessTokens(): AccessTokens {
+        const accessTokensModel = new AccessTokens();
+        accessTokensModel.Facebook = this.getCurrentFacebookAccessToken();
+        accessTokensModel.Instagram = this.getCurrentInstagramAccessToken();
+        accessTokensModel.Twitter = this.getCurrentTwitterAccessToken();
+        return accessTokensModel;
     }
 
     loginInstagramUser() {

@@ -1,3 +1,25 @@
-<div class="add-page-root">
-  <span class="add-text">Add followed user</span>
+<div class="add-user-root">
+  <div class="add-user-header">
+    <span class="add-user-header-content">Add followed user</span>
+  </div>
+  <div class="add-user-content">
+    <div class="search-div">
+      <input class="user-id-input" type="text" #userId/>
+      <button id="search-btn" class="search-btn" (click)="searchClick(userId.value)">Search</button>
+    </div>
+    <div class="result-list">
+      <!-- <div class="user-data">
+        <img class="user-icon-circle" src="https://scontent.fwaw5-1.fna.fbcdn.net/v/t1.0-1/c0.0.240.240/p240x240/1468814_603637589692879_499809455_n.jpg?oh=e6680bc1e47266310469b5dd6f67751b&oe=5AF5B084"/>
+        <div class="user-name">Przemek Dudycz, Legnica - Facebook</div>
+      </div>
+      <div class="user-data">
+        <img class="user-icon-circle" src="https://scontent.fwaw5-1.fna.fbcdn.net/v/t1.0-1/c0.0.240.240/p240x240/1468814_603637589692879_499809455_n.jpg?oh=e6680bc1e47266310469b5dd6f67751b&oe=5AF5B084"/>
+        <div class="user-name">Przemek Dudycz, Legnica - Facebook</div>
+      </div> -->
+      <div class="userData" *ngFor="let user of searchedUserArray" (dblclick)="onUserDblClick(user)">
+        <img class="user-icon-circle" src="https://i.kinja-img.com/gawker-media/image/upload/s--3lzma_MB--/c_fit,fl_progressive,q_80,w_320/18bdwssyxpibxjpg.jpg"/>
+        <div class="user-name">{{user.fullName}} - Facebook</div>
+      </div>
+    </div>
+  </div>
 </div>

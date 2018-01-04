@@ -18,6 +18,13 @@ using SA.Backend.Instagram.User;
 using SA.Contracts.Instagram.User;
 using SA.Contracts.Instagram.User.Commands;
 using SA.Contracts.Twitter;
+using SA.Contracts.User.Queries;
+using SA.Contracts.User;
+using SA.Backend.User;
+using System.Collections.Generic;
+using SA.Contracts.User.Commands;
+using SA.Backend.Repositories.Interfaces;
+using SA.Backend.Repositories;
 
 namespace SA.Backend
 {
@@ -52,6 +59,9 @@ namespace SA.Backend
             //INSTAGRAM
             services.RegisterAsyncQueryHandler<GetInstagramAccessToken, string, InstagramUserQueryHandler>();
             services.RegisterAsyncCommandHandler<RefreshInstagramRecentMedia, InstagramUserCommandHandler>();
+
+            services.RegisterAsyncQueryHandler<GetSearchedUser, SearchUserModel, UserQueryHandler>();
+            services.RegisterAsyncCommandHandler<AddUser, UserCommandHandler>();
         }
 
         private void RegisterRepositories(IServiceCollection services)
@@ -63,6 +73,10 @@ namespace SA.Backend
             services.AddEFCRUDRepository<SAContext, SearchedTwitterUserData>();
             //INSTAGRAM
             services.AddEFCRUDRepository<SAContext, instagram_media_recent>();
+
+            services.AddSingleton<IFacebookRepository, FacebookRepository>();
+            services.AddSingleton<IInstagramRepository, InstagramRepository>();
+            services.AddSingleton<ITwitterRepository, TwitterRepository>();
         } 
     }
 }

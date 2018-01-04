@@ -22,17 +22,17 @@ export class AuthenticationComponent implements OnInit {
       const twitterAccessToken = params['twitterAccessToken'];
 
       if (facebookAccessToken) {
-        this.service.loginUser('facebookAccessToken', facebookAccessToken);
+        this.service.loginUser(facebookAccessToken, 'facebook');
         this.router.navigate(['addpage']);
       }
 
       if (instagramAccessToken) {
-        this.service.loginUser('instagramAccessToken', instagramAccessToken);
+        this.service.loginUser(instagramAccessToken, 'instagram');
         this.router.navigate(['addpage']);
       }
 
       if (twitterAccessToken) {
-        this.service.loginUser('twitterAccessToken', twitterAccessToken);
+        this.service.loginUser(twitterAccessToken, 'twitter');
         this.router.navigate(['addpage']);
       }
     });
