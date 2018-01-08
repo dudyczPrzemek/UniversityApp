@@ -8,7 +8,7 @@
         <div>Followed Users</div>
     </div>
     <div class="followed-user-content">
-      <div class="followed-user">
+      <!-- <div class="followed-user">
         <div class="followed-user-data">
           <img class="person-icon-circle" src="../../../assets/images/unknowPerson.jpg"/>
           <span class="person-name clickable" (click)="dashboardClick()">Bill Gates</span>
@@ -42,6 +42,18 @@
             <span class="analysis-nav clickable" (click)="locationClick()">Location</span>
             <span class="analysis-nav clickable" (click)="activityClick()">Internet activity</span>
             <span class="analysis-nav clickable" (click)="characterClick()">Character</span>
+        </div>
+      </div> -->
+      <div class="followed-user" *ngFor="let followedUser of followedUsers">
+        <div class="followed-user-data">
+          <img class="person-icon-circle" src="../../../assets/images/unknowPerson.jpg"/>
+          <span class="person-name clickable" (click)="dashboardClick(followedUser)">{{followedUser.personalData.firstName}} {{followedUser.personalData.lastName}}</span>
+        </div>
+        <div class="followed-user-analisys">
+          <span class="analysis-nav clickable" (click)="personalDataClick()">Personal data</span>
+          <span class="analysis-nav clickable" (click)="locationClick()">Location</span>
+          <span class="analysis-nav clickable" (click)="activityClick()">Internet activity</span>
+          <span class="analysis-nav clickable" (click)="characterClick()">Character</span>
         </div>
       </div>
     </div>

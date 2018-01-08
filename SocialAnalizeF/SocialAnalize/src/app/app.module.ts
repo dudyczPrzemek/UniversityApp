@@ -19,6 +19,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 import { AppComponent } from './components/app/app.component';
 import { AuthenticationComponent } from './components/authentication/authentication.component';
+import { FollowedUsersService } from './services/followedUsers/followed.users.service';
 
 export function appInitializeFactory(iconRegistry: IconRegistry): Function {
   return async () => {
@@ -51,7 +52,8 @@ export function appInitializeFactory(iconRegistry: IconRegistry): Function {
     HttpModule
   ],
   providers: [
-    AuthenticationService
+    AuthenticationService,
+    FollowedUsersService
   ],
   bootstrap: [AppComponent]
 })

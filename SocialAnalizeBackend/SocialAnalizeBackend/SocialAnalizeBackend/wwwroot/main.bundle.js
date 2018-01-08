@@ -43,6 +43,7 @@ webpackEmptyAsyncContext.id = "../../../../../src/$$_gendir lazy recursive";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__swimlane_ngx_charts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_16__swimlane_ngx_charts__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_app_app_component__ = __webpack_require__("../../../../../src/app/components/app/app.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__components_authentication_authentication_component__ = __webpack_require__("../../../../../src/app/components/authentication/authentication.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__services_followedUsers_followed_users_service__ = __webpack_require__("../../../../../src/app/services/followedUsers/followed.users.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -103,6 +104,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 
 
 
+
 function appInitializeFactory(iconRegistry) {
     var _this = this;
     return function () { return __awaiter(_this, void 0, void 0, function () {
@@ -141,7 +143,8 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_0__angular_http__["c" /* HttpModule */]
             ],
             providers: [
-                __WEBPACK_IMPORTED_MODULE_8__services_authentication_authentication_service__["a" /* AuthenticationService */]
+                __WEBPACK_IMPORTED_MODULE_8__services_authentication_authentication_service__["a" /* AuthenticationService */],
+                __WEBPACK_IMPORTED_MODULE_19__services_followedUsers_followed_users_service__["a" /* FollowedUsersService */]
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_17__components_app_app_component__["a" /* AppComponent */]]
         })
@@ -441,16 +444,14 @@ var AddStartPageComponent = (function () {
         });
     };
     AddStartPageComponent.prototype.onUserDblClick = function (userModel) {
-        var postBody = JSON.stringify(userModel);
-        debugger;
         var postHeaders = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Headers */]();
         postHeaders.append('Accept', 'application/json');
         postHeaders.append('Content-Type', 'application/json');
         var options = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["d" /* RequestOptions */]({ headers: postHeaders });
-        this.http.post("http://localhost:50985/api/searchUser", userModel, options)
+        var accessTokens = this.authService.getAccessTokens();
+        this.http.post('http://localhost:50985/api/searchUser', { searchUser: userModel, accessTokens: accessTokens }, options)
             .subscribe((function (result) {
-            console.log("abc");
-            debugger;
+            console.log('abc');
         }));
     };
     AddStartPageComponent = __decorate([
@@ -729,7 +730,7 @@ var CharacterAnalizerComponent = (function () {
 /***/ "../../../../../src/app/components/dashboard/dashboard.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"dashboard-root\">\n  <div class=\"data-row\">\n    <div class=\"user-data\">\n      <img class=\"user-icon-circle\" src=\"../../../assets/images/unknowPerson.jpg\"/>\n      <div class=\"user-name\">Bill Gates</div>\n    </div>\n    <div class=\"social-page\">\n      <button class=\"data-btn\">Use Facebook</button>\n      <button class=\"data-btn\">Use Instagram</button>\n      <button class=\"data-btn\">Use Tweeter</button>\n    </div>\n  </div>\n  <div class=\"data-row\">\n    <div class=\"personal-data analize-rect\">\n      <button class=\"data-btn btn-primary\">Personal Data</button>\n    </div>\n    <div class=\"location-analizer analize-rect\">\n      <button class=\"data-btn data-btn btn-primary\">Location Analizer</button>\n    </div>\n  </div>\n  <div class=\"data-row\">\n    <div class=\"activity-analizer analize-rect\">\n      <button class=\"data-btn data-btn btn-primary\">Internet Activity Analizer</button>\n    </div>\n    <div class=\"character-analizer analize-rect\">\n      <button class=\"data-btn data-btn btn-primary\">Character Analizer</button>\n    </div>\n  </div>\n</div>"
+module.exports = "<div class=\"dashboard-root\">\n  <div class=\"data-row\">\n    <div class=\"user-data\">\n      <img class=\"user-icon-circle\" src=\"../../../assets/images/unknowPerson.jpg\"/>\n      <div class=\"user-name\">{{currentFollowedUser.personalData.firstName}} {{currentFollowedUser.personalData.lastName}}</div>\n    </div>\n    <div class=\"social-page\">\n      <button class=\"data-btn\">Use Facebook</button>\n      <button class=\"data-btn\">Use Instagram</button>\n      <button class=\"data-btn\">Use Tweeter</button>\n    </div>\n  </div>\n  <div class=\"data-row\">\n    <div class=\"personal-data analize-rect\">\n      <button class=\"data-btn btn-primary\">Personal Data</button>\n    </div>\n    <div class=\"location-analizer analize-rect\">\n      <button class=\"data-btn data-btn btn-primary\">Location Analizer</button>\n    </div>\n  </div>\n  <div class=\"data-row\">\n    <div class=\"activity-analizer analize-rect\">\n      <button class=\"data-btn data-btn btn-primary\">Internet Activity Analizer</button>\n    </div>\n    <div class=\"character-analizer analize-rect\">\n      <button class=\"data-btn data-btn btn-primary\">Character Analizer</button>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -758,6 +759,7 @@ module.exports = module.exports.toString();
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DashboardComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_followedUsers_followed_users_service__ = __webpack_require__("../../../../../src/app/services/followedUsers/followed.users.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -769,12 +771,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var DashboardComponent = (function () {
-    function DashboardComponent(route, router) {
+    function DashboardComponent(route, router, followedUserService) {
         this.route = route;
         this.router = router;
+        this.followedUserService = followedUserService;
     }
     DashboardComponent.prototype.ngOnInit = function () {
+        debugger;
+        this.currentFollowedUser = this.followedUserService.currentSelectedFollowedUser.getValue();
     };
     DashboardComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -782,10 +788,10 @@ var DashboardComponent = (function () {
             template: __webpack_require__("../../../../../src/app/components/dashboard/dashboard.component.html"),
             styles: [__webpack_require__("../../../../../src/app/components/dashboard/dashboard.component.scss")]
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__services_followedUsers_followed_users_service__["a" /* FollowedUsersService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_followedUsers_followed_users_service__["a" /* FollowedUsersService */]) === "function" && _c || Object])
     ], DashboardComponent);
     return DashboardComponent;
-    var _a, _b;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=dashboard.component.js.map
@@ -913,7 +919,7 @@ var PersonalDataComponent = (function () {
 /***/ "../../../../../src/app/components/side-navigation/side-navigation.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"side-navbar-root\">\n  <div class=\"logged-user-info\">\n    <img class=\"logged-icon-circle\" src=\"https://scontent.fwaw5-1.fna.fbcdn.net/v/t1.0-9/1468814_603637589692879_499809455_n.jpg?oh=68eab80d86d416cead9c1a901ab24a80&oe=5AA839B5\"/>\n    <div class=\"user-greeting\">Hello Przemek</div>\n  </div>\n  <div class=\"side-navbar-content\">\n    <div class=\"followed-user-header\">\n        <div>Followed Users</div>\n    </div>\n    <div class=\"followed-user-content\">\n      <div class=\"followed-user\">\n        <div class=\"followed-user-data\">\n          <img class=\"person-icon-circle\" src=\"../../../assets/images/unknowPerson.jpg\"/>\n          <span class=\"person-name clickable\" (click)=\"dashboardClick()\">Bill Gates</span>\n        </div>\n        <div class=\"followed-user-analisys\">\n          <span class=\"analysis-nav clickable\" (click)=\"personalDataClick()\">Personal data</span>\n          <span class=\"analysis-nav clickable\" (click)=\"locationClick()\">Location</span>\n          <span class=\"analysis-nav clickable\" (click)=\"activityClick()\">Internet activity</span>\n          <span class=\"analysis-nav clickable\" (click)=\"characterClick()\">Character</span>\n        </div>\n      </div>\n      <div class=\"followed-user\">\n        <div class=\"followed-user-data\">\n          <img class=\"person-icon-circle\" src=\"../../../assets/images/unknowPerson.jpg\"/>\n          <span class=\"person-name clickable\" (click)=\"dashboardClick()\">Jacek Nowak</span>\n        </div>\n        <div class=\"followed-user-analisys hidden\">\n            <span class=\"analysis-nav clickable\" (click)=\"personalDataClick()\">Personal data</span>\n            <span class=\"analysis-nav clickable\" (click)=\"locationClick()\">Location</span>\n            <span class=\"analysis-nav clickable\" (click)=\"activityClick()\">Internet activity</span>\n            <span class=\"analysis-nav clickable\" (click)=\"characterClick()\">Character</span>\n        </div>\n      </div>\n      <div class=\"followed-user\">\n        <div class=\"followed-user-data\">\n          <img class=\"person-icon-circle\" src=\"../../../assets/images/unknowPerson.jpg\"/>\n          <span class=\"person-name clickable\" (click)=\"dashboardClick()\">Lionel Messi</span>\n        </div>\n        <div class=\"followed-user-analisys hidden\">\n            <span class=\"analysis-nav clickable\" (click)=\"personalDataClick()\">Personal data</span>\n            <span class=\"analysis-nav clickable\" (click)=\"locationClick()\">Location</span>\n            <span class=\"analysis-nav clickable\" (click)=\"activityClick()\">Internet activity</span>\n            <span class=\"analysis-nav clickable\" (click)=\"characterClick()\">Character</span>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
+module.exports = "<div class=\"side-navbar-root\">\n  <div class=\"logged-user-info\">\n    <img class=\"logged-icon-circle\" src=\"https://scontent.fwaw5-1.fna.fbcdn.net/v/t1.0-9/1468814_603637589692879_499809455_n.jpg?oh=68eab80d86d416cead9c1a901ab24a80&oe=5AA839B5\"/>\n    <div class=\"user-greeting\">Hello Przemek</div>\n  </div>\n  <div class=\"side-navbar-content\">\n    <div class=\"followed-user-header\">\n        <div>Followed Users</div>\n    </div>\n    <div class=\"followed-user-content\">\n      <!-- <div class=\"followed-user\">\n        <div class=\"followed-user-data\">\n          <img class=\"person-icon-circle\" src=\"../../../assets/images/unknowPerson.jpg\"/>\n          <span class=\"person-name clickable\" (click)=\"dashboardClick()\">Bill Gates</span>\n        </div>\n        <div class=\"followed-user-analisys\">\n          <span class=\"analysis-nav clickable\" (click)=\"personalDataClick()\">Personal data</span>\n          <span class=\"analysis-nav clickable\" (click)=\"locationClick()\">Location</span>\n          <span class=\"analysis-nav clickable\" (click)=\"activityClick()\">Internet activity</span>\n          <span class=\"analysis-nav clickable\" (click)=\"characterClick()\">Character</span>\n        </div>\n      </div>\n      <div class=\"followed-user\">\n        <div class=\"followed-user-data\">\n          <img class=\"person-icon-circle\" src=\"../../../assets/images/unknowPerson.jpg\"/>\n          <span class=\"person-name clickable\" (click)=\"dashboardClick()\">Jacek Nowak</span>\n        </div>\n        <div class=\"followed-user-analisys hidden\">\n            <span class=\"analysis-nav clickable\" (click)=\"personalDataClick()\">Personal data</span>\n            <span class=\"analysis-nav clickable\" (click)=\"locationClick()\">Location</span>\n            <span class=\"analysis-nav clickable\" (click)=\"activityClick()\">Internet activity</span>\n            <span class=\"analysis-nav clickable\" (click)=\"characterClick()\">Character</span>\n        </div>\n      </div>\n      <div class=\"followed-user\">\n        <div class=\"followed-user-data\">\n          <img class=\"person-icon-circle\" src=\"../../../assets/images/unknowPerson.jpg\"/>\n          <span class=\"person-name clickable\" (click)=\"dashboardClick()\">Lionel Messi</span>\n        </div>\n        <div class=\"followed-user-analisys hidden\">\n            <span class=\"analysis-nav clickable\" (click)=\"personalDataClick()\">Personal data</span>\n            <span class=\"analysis-nav clickable\" (click)=\"locationClick()\">Location</span>\n            <span class=\"analysis-nav clickable\" (click)=\"activityClick()\">Internet activity</span>\n            <span class=\"analysis-nav clickable\" (click)=\"characterClick()\">Character</span>\n        </div>\n      </div> -->\n      <div class=\"followed-user\" *ngFor=\"let followedUser of followedUsers\">\n        <div class=\"followed-user-data\">\n          <img class=\"person-icon-circle\" src=\"../../../assets/images/unknowPerson.jpg\"/>\n          <span class=\"person-name clickable\" (click)=\"dashboardClick(followedUser)\">{{followedUser.personalData.firstName}} {{followedUser.personalData.lastName}}</span>\n        </div>\n        <div class=\"followed-user-analisys\">\n          <span class=\"analysis-nav clickable\" (click)=\"personalDataClick()\">Personal data</span>\n          <span class=\"analysis-nav clickable\" (click)=\"locationClick()\">Location</span>\n          <span class=\"analysis-nav clickable\" (click)=\"activityClick()\">Internet activity</span>\n          <span class=\"analysis-nav clickable\" (click)=\"characterClick()\">Character</span>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -942,6 +948,7 @@ module.exports = module.exports.toString();
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SideNavigationComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_followedUsers_followed_users_service__ = __webpack_require__("../../../../../src/app/services/followedUsers/followed.users.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -953,12 +960,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var SideNavigationComponent = (function () {
-    function SideNavigationComponent(router, route) {
+    function SideNavigationComponent(router, route, followedUsersService) {
         this.router = router;
         this.route = route;
+        this.followedUsersService = followedUsersService;
+        this.followedUsers = [];
     }
-    SideNavigationComponent.prototype.dashboardClick = function () {
+    SideNavigationComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        debugger;
+        this.followedUsersService.followedUsers.subscribe(function (followedUsersArray) {
+            _this.followedUsers = followedUsersArray;
+        });
+    };
+    SideNavigationComponent.prototype.dashboardClick = function (followedUser) {
+        debugger;
+        this.followedUsersService.currentSelectedFollowedUser.next(followedUser);
         this.router.navigate(['dashboard']);
     };
     SideNavigationComponent.prototype.personalDataClick = function () {
@@ -979,10 +998,10 @@ var SideNavigationComponent = (function () {
             template: __webpack_require__("../../../../../src/app/components/side-navigation/side-navigation.component.html"),
             styles: [__webpack_require__("../../../../../src/app/components/side-navigation/side-navigation.component.scss")]
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_router__["b" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_router__["a" /* ActivatedRoute */]) === "function" && _b || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_router__["b" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_router__["a" /* ActivatedRoute */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__services_followedUsers_followed_users_service__["a" /* FollowedUsersService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_followedUsers_followed_users_service__["a" /* FollowedUsersService */]) === "function" && _c || Object])
     ], SideNavigationComponent);
     return SideNavigationComponent;
-    var _a, _b;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=side-navigation.component.js.map
@@ -1152,6 +1171,62 @@ var AuthenticationService = (function () {
 }());
 
 //# sourceMappingURL=authentication.service.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/services/followedUsers/followed.users.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FollowedUsersService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_BehaviorSubject__ = __webpack_require__("../../../../rxjs/BehaviorSubject.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_BehaviorSubject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_BehaviorSubject__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var FollowedUsersService = (function () {
+    function FollowedUsersService(http) {
+        this.http = http;
+        this.followedUsers = new __WEBPACK_IMPORTED_MODULE_1_rxjs_BehaviorSubject__["BehaviorSubject"]([]);
+        this.currentSelectedFollowedUser = new __WEBPACK_IMPORTED_MODULE_1_rxjs_BehaviorSubject__["BehaviorSubject"](null);
+        debugger;
+        this.load();
+    }
+    FollowedUsersService.prototype.ngOnInit = function () {
+        // debugger;
+        // this.load();
+    };
+    FollowedUsersService.prototype.load = function () {
+        var _this = this;
+        debugger;
+        var followedUsersUrl = 'http://localhost:50985/api/followedUser';
+        this.http.get(followedUsersUrl)
+            .subscribe(function (result) {
+            var followedUsersResult = result.json();
+            debugger;
+            _this.followedUsers.next(followedUsersResult.followedUserArray);
+        });
+    };
+    FollowedUsersService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Injectable"])(),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_http__["b" /* Http */]) === "function" && _a || Object])
+    ], FollowedUsersService);
+    return FollowedUsersService;
+    var _a;
+}());
+
+//# sourceMappingURL=followed.users.service.js.map
 
 /***/ }),
 

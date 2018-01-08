@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using SA.Backend.Repositories.Interfaces;
 using SA.Contracts.Facebook;
+using SA.Contracts.Facebook.User;
 using SA.Contracts.User;
 using System;
 using System.Collections.Generic;
@@ -38,6 +39,18 @@ namespace SA.Backend.Repositories
                 });
             }
             return searchModel;
+        }
+
+        public async Task<facebook_user> GetDataFromFacebook(string facebookUserId, string accessToken)
+        {
+            var client = new HttpClient();
+            var userUrl = @"https://graph.facebook.com/"+ facebookUserId + "?fields=first_name,last_name,picture,age_range,gender&access_token=" + accessToken;
+            var response = await client.GetAsync(userUrl);
+            var data = await response.Content.ReadAsStringAsync();
+            return new facebook_user()
+            {
+                Data = data
+            };
         }
     }
 }

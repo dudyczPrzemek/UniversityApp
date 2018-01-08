@@ -1,5 +1,6 @@
 ﻿using SA.Backend.Repositories.Interfaces;
 using SA.Backend.Twitter;
+using SA.Contracts.Twitter;
 using SA.Contracts.User;
 using System;
 using System.Collections.Generic;
@@ -34,6 +35,16 @@ namespace SA.Backend.Repositories
                 });
             }
             return searchModel;
+        }
+
+        public async Task<user_tweets> GetTwitterData(string userTwitterId)
+        {
+            Auth.SetUserCredentials(TwitterGlobal.UserCredentials.ConsumerKey, TwitterGlobal.UserCredentials.ConsumerSecret, TwitterGlobal.UserCredentials.AccessToken, TwitterGlobal.UserCredentials.AccessTokenSecret);
+            var tweets = Timeline.GetUserTimeline(userTwitterId);
+            return new user_tweets()
+            {
+                Data = JsonSerializer.ToJson(tweets)
+            };
         }
     }
 }

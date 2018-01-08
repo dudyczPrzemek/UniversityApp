@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using SA.Backend.Repositories.Interfaces;
 using SA.Contracts.Instagram;
+using SA.Contracts.Instagram.User;
 using SA.Contracts.User;
 using System;
 using System.Collections.Generic;
@@ -38,6 +39,18 @@ namespace SA.Backend.Repositories
                 });
             }
             return searchModel;
+        }
+
+        public async Task<instagram_media_recent> GetInstagramData(string userInstagramId, string accessToken)
+        {
+            var client = new HttpClient();
+            var mediaUri = new Uri(@"https://api.instagram.com/v1/users/"+ userInstagramId + "/media/recent/?access_token=" + accessToken);
+            var response = await client.GetAsync(mediaUri);
+            var data =  await response.Content.ReadAsStringAsync();
+            return new instagram_media_recent()
+            {
+                Data = data
+            };
         }
     }
 }

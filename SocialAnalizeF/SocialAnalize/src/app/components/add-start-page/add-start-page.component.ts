@@ -35,8 +35,8 @@ export class AddStartPageComponent implements OnInit {
     postHeaders.append('Accept', 'application/json');
     postHeaders.append('Content-Type', 'application/json');
     const options = new RequestOptions({ headers: postHeaders });
-
-    this.http.post('http://localhost:50985/api/searchUser', userModel, options)
+    const accessTokens: AccessTokens = this.authService.getAccessTokens();
+    this.http.post('http://localhost:50985/api/searchUser', {searchUser: userModel, accessTokens: accessTokens} , options)
       .subscribe((result => {
         console.log('abc');
       }));

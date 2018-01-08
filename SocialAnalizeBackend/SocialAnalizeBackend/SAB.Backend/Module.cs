@@ -25,6 +25,7 @@ using System.Collections.Generic;
 using SA.Contracts.User.Commands;
 using SA.Backend.Repositories.Interfaces;
 using SA.Backend.Repositories;
+using SA.Contracts.Facebook.User;
 
 namespace SA.Backend
 {
@@ -61,6 +62,7 @@ namespace SA.Backend
             services.RegisterAsyncCommandHandler<RefreshInstagramRecentMedia, InstagramUserCommandHandler>();
 
             services.RegisterAsyncQueryHandler<GetSearchedUser, SearchUserModel, UserQueryHandler>();
+            services.RegisterAsyncQueryHandler<GetFollowedUsers, IList<FollowedUser>, UserQueryHandler>();
             services.RegisterAsyncCommandHandler<AddUser, UserCommandHandler>();
         }
 
@@ -73,6 +75,11 @@ namespace SA.Backend
             services.AddEFCRUDRepository<SAContext, SearchedTwitterUserData>();
             //INSTAGRAM
             services.AddEFCRUDRepository<SAContext, instagram_media_recent>();
+            services.AddEFCRUDRepository<SAContext, user_tweets>();
+            services.AddEFCRUDRepository<SAContext, facebook_user>();
+            services.AddEFCRUDRepository<SAContext, FollowedUser>();
+
+            services.AddScoped<IFollowedUserRepository, FollowedUserRepository>();
 
             services.AddSingleton<IFacebookRepository, FacebookRepository>();
             services.AddSingleton<IInstagramRepository, InstagramRepository>();

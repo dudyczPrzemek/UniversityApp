@@ -1,8 +1,11 @@
 ﻿using GoldenEye.Backend.Core.DDD.Commands;
 using GoldenEye.Backend.Core.DDD.Queries;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json.Linq;
+using SA.Contracts.Base;
 using SA.Contracts.Facebook;
 using SA.Contracts.User;
+using SA.Contracts.User.Commands;
 using SA.Contracts.User.Queries;
 using System;
 using System.Collections.Generic;
@@ -26,24 +29,40 @@ namespace SA.WebApi.Controllers.User
         [HttpGet]
         public async Task<JsonResult> Get (string userId, string facebookAccessToken, string instagramAccessToken, string twitterAccessToken)
         {
-            var searchResult =  await queryBus.Send<GetSearchedUser, SearchUserModel>(new GetSearchedUser()
+            SearchUserModel searchResult = null;
+            try
             {
-                AccessTokens = new Contracts.Base.AccessTokensModel()
+                searchResult = await queryBus.Send<GetSearchedUser, SearchUserModel>(new GetSearchedUser()
                 {
-                    Facebook = facebookAccessToken,
-                    Instagram = instagramAccessToken,
-                    Twitter = twitterAccessToken
-                },
-                UserId = userId
-            });
+                    AccessTokens = new Contracts.Base.AccessTokensModel()
+                    {
+                        Facebook = facebookAccessToken,
+                        Instagram = instagramAccessToken,
+                        Twitter = twitterAccessToken
+                    },
+                    UserId = userId
+                });
+            }catch(Exception e)
+            {
+                Console.Write("");
+            }
 
             return new JsonResult(searchResult);
         }
 
         [HttpPost]
-        public async Task<Boolean> Post([FromBody]SearchUserUnitModel searchUser)
+        public async Task<Boolean> Post([FromBody]JObject payload)
         {
-            Console.Write("dsadas");
+            var searchedUser = payload["searchUser"].ToObject<SearchUserUnitModel>();
+            var accessTokens = payload["accessTokens"].ToObject<AccessTokensModel>();
+            await commandBus.Send(new AddUser()
+            {
+                AccessTokens = accessTokens,
+                InstagramId = searchedUser.InstagramId,
+                FacebookId = searchedUser.FacebookId,
+                TwitterId = searchedUser.TwitterId,
+                FirstName = searchedUser.FullName
+            });
             return true;
         }
     }

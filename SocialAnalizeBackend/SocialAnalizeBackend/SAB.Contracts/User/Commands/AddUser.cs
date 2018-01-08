@@ -11,5 +11,8 @@ namespace SA.Contracts.User.Commands
         public string FacebookId { get; set; }
         public string InstagramId { get; set; }
         public string TwitterId { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public AccessTokensModel AccessTokens { get; set; }
     }
 }
