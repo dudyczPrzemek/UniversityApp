@@ -13,8 +13,7 @@
     "start-external": "ng serve --host 0.0.0.0 --disable-host-check",
     "build-prod": "ng build --prod",
     "test-prod": "ng test --watch false --code-coverage",
-    "e2e-prod": "ng e2e --no-serve",
-    "precommit": "npm run lint"
+    "e2e-prod": "ng e2e --no-serve"
   },
   "private": true,
   "dependencies": {

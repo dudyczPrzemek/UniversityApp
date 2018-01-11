@@ -5,9 +5,9 @@
       <div class="user-name">{{currentFollowedUser.personalData.firstName}} {{currentFollowedUser.personalData.lastName}}</div>
     </div>
     <div class="social-page">
-      <button class="data-btn">Use Facebook</button>
-      <button class="data-btn">Use Instagram</button>
-      <button class="data-btn">Use Tweeter</button>
+      <button class="data-btn" (click)="facebookRefresh()">Use Facebook</button>
+      <button class="data-btn" (click)="instagramRefresh()">Use Instagram</button>
+      <button class="data-btn" (click)="twitterRefresh()">Use Tweeter</button>
     </div>
   </div>
   <div class="data-row">

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PersonalData } from '../../models/users/personal.data';
+import { FollowedUsersService } from '../../services/followedUsers/followed.users.service';
 
 @Component({
   selector: 'app-personal-data',
@@ -6,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./personal-data.component.scss']
 })
 export class PersonalDataComponent implements OnInit {
-
-  constructor() { }
+  followedUserPersonalData: PersonalData;
+  constructor(private followedUserService: FollowedUsersService) { }
 
   ngOnInit() {
+    this.followedUserPersonalData = this.followedUserService.currentSelectedFollowedUser.getValue().personalData;
   }
 
 }

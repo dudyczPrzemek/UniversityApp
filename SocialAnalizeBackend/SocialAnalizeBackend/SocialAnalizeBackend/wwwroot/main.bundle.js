@@ -44,6 +44,9 @@ webpackEmptyAsyncContext.id = "../../../../../src/$$_gendir lazy recursive";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_app_app_component__ = __webpack_require__("../../../../../src/app/components/app/app.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__components_authentication_authentication_component__ = __webpack_require__("../../../../../src/app/components/authentication/authentication.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__services_followedUsers_followed_users_service__ = __webpack_require__("../../../../../src/app/services/followedUsers/followed.users.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__components_add_followed_user_add_followed_user_component__ = __webpack_require__("../../../../../src/app/components/add-followed-user/add-followed-user.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__services_localization_localization_service__ = __webpack_require__("../../../../../src/app/services/localization/localization.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__services_internetActivity_internet_activity_service__ = __webpack_require__("../../../../../src/app/services/internetActivity/internet.activity.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -105,6 +108,9 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 
 
 
+
+
+
 function appInitializeFactory(iconRegistry) {
     var _this = this;
     return function () { return __awaiter(_this, void 0, void 0, function () {
@@ -126,6 +132,7 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_9__components_side_navigation_side_navigation_component__["a" /* SideNavigationComponent */],
                 __WEBPACK_IMPORTED_MODULE_7__components_top_navigation_top_navigation_component__["a" /* TopNavigationComponent */],
                 __WEBPACK_IMPORTED_MODULE_6__components_add_start_page_add_start_page_component__["a" /* AddStartPageComponent */],
+                __WEBPACK_IMPORTED_MODULE_20__components_add_followed_user_add_followed_user_component__["a" /* AddFollowedUserComponent */],
                 __WEBPACK_IMPORTED_MODULE_5__components_personal_data_personal_data_component__["a" /* PersonalDataComponent */],
                 __WEBPACK_IMPORTED_MODULE_4__components_location_analizer_location_analizer_component__["a" /* LocationAnalizerComponent */],
                 __WEBPACK_IMPORTED_MODULE_3__components_activity_analizer_activity_analizer_component__["a" /* ActivityAnalizerComponent */],
@@ -144,7 +151,9 @@ var AppModule = (function () {
             ],
             providers: [
                 __WEBPACK_IMPORTED_MODULE_8__services_authentication_authentication_service__["a" /* AuthenticationService */],
-                __WEBPACK_IMPORTED_MODULE_19__services_followedUsers_followed_users_service__["a" /* FollowedUsersService */]
+                __WEBPACK_IMPORTED_MODULE_19__services_followedUsers_followed_users_service__["a" /* FollowedUsersService */],
+                __WEBPACK_IMPORTED_MODULE_21__services_localization_localization_service__["a" /* LocalizationService */],
+                __WEBPACK_IMPORTED_MODULE_22__services_internetActivity_internet_activity_service__["a" /* InternetActivityService */]
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_17__components_app_app_component__["a" /* AppComponent */]]
         })
@@ -170,6 +179,7 @@ var AppModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_authentication_authentication_component__ = __webpack_require__("../../../../../src/app/components/authentication/authentication.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_add_followed_user_add_followed_user_component__ = __webpack_require__("../../../../../src/app/components/add-followed-user/add-followed-user.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -185,11 +195,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var routes = [
     { path: '', redirectTo: 'login', pathMatch: 'full' },
     { path: 'login', component: __WEBPACK_IMPORTED_MODULE_8__components_authentication_authentication_component__["a" /* AuthenticationComponent */] },
     { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_5__components_dashboard_dashboard_component__["a" /* DashboardComponent */] },
     { path: 'addpage', component: __WEBPACK_IMPORTED_MODULE_4__components_add_start_page_add_start_page_component__["a" /* AddStartPageComponent */] },
+    { path: 'addfolloweduser', component: __WEBPACK_IMPORTED_MODULE_9__components_add_followed_user_add_followed_user_component__["a" /* AddFollowedUserComponent */] },
     { path: 'pesronaldata', component: __WEBPACK_IMPORTED_MODULE_3__components_personal_data_personal_data_component__["a" /* PersonalDataComponent */] },
     { path: 'locationanalizer', component: __WEBPACK_IMPORTED_MODULE_2__components_location_analizer_location_analizer_component__["a" /* LocationAnalizerComponent */] },
     { path: 'activityanalizer', component: __WEBPACK_IMPORTED_MODULE_1__components_activity_analizer_activity_analizer_component__["a" /* ActivityAnalizerComponent */] },
@@ -244,6 +256,7 @@ module.exports = module.exports.toString();
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ActivityAnalizerComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__models_chart_chart_model__ = __webpack_require__("../../../../../src/app/models/chart/chart.model.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_internetActivity_internet_activity_service__ = __webpack_require__("../../../../../src/app/services/internetActivity/internet.activity.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -255,14 +268,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var ActivityAnalizerComponent = (function () {
-    function ActivityAnalizerComponent() {
+    function ActivityAnalizerComponent(internetActivityService) {
+        this.internetActivityService = internetActivityService;
     }
     ActivityAnalizerComponent.prototype.ngOnInit = function () {
-        this.initHashtagChartModel();
-        this.initHourActivityChart();
+        var _this = this;
+        this.internetActivityService.load().subscribe(function (result) {
+            debugger;
+            var jsonResult = result.json();
+            _this.initHashtagChartModel(jsonResult.hashtagDetails);
+            _this.initHourActivityChart(jsonResult.instagramHourActivity, jsonResult.twitterHourActivity);
+        });
     };
-    ActivityAnalizerComponent.prototype.initHashtagChartModel = function () {
+    ActivityAnalizerComponent.prototype.initHashtagChartModel = function (hashtagsArray) {
         this.hashtagChartModel = new __WEBPACK_IMPORTED_MODULE_0__models_chart_chart_model__["a" /* ChartModel */]();
         this.hashtagChartModel.showLegend = true;
         this.hashtagChartModel.showXAxis = true;
@@ -277,22 +297,15 @@ var ActivityAnalizerComponent = (function () {
         this.hashtagChartModel.colorScheme = {
             domain: ['#5AA454', '#A10A28', '#C7B42C', '#000000']
         };
-        this.hashtagChartModel.data = [
-            {
-                'name': 'polishboy',
-                'value': 15
-            },
-            {
-                'name': 'polishgirl',
-                'value': 8
-            },
-            {
-                'name': 'sport',
-                'value': 5
-            }
-        ];
+        this.hashtagChartModel.data = [];
+        for (var i = 0; i < hashtagsArray.length; ++i) {
+            this.hashtagChartModel.data.push({
+                'name': hashtagsArray[i].name,
+                'value': hashtagsArray[i].count
+            });
+        }
     };
-    ActivityAnalizerComponent.prototype.initHourActivityChart = function () {
+    ActivityAnalizerComponent.prototype.initHourActivityChart = function (instagramArray, twitterArray) {
         this.hourActivityChart = new __WEBPACK_IMPORTED_MODULE_0__models_chart_chart_model__["a" /* ChartModel */]();
         this.hourActivityChart.view = [600, 200];
         this.hourActivityChart.showXAxis = true;
@@ -309,55 +322,12 @@ var ActivityAnalizerComponent = (function () {
         this.hourActivityChart.autoScale = true;
         this.hourActivityChart.data = [
             {
-                'name': 'Facebook',
-                'series': [
-                    { 'name': '00:00', 'value': 19 }, { 'name': '01:00', 'value': 0 },
-                    { 'name': '02:00', 'value': 0 }, { 'name': '03:00', 'value': 0 },
-                    { 'name': '04:00', 'value': 0 }, { 'name': '05:00', 'value': 0 },
-                    { 'name': '06:00', 'value': 0 }, { 'name': '07:00', 'value': 1 },
-                    { 'name': '08:00', 'value': 0 }, { 'name': '09:00', 'value': 1 },
-                    { 'name': '10:00', 'value': 3 }, { 'name': '11:00', 'value': 3 },
-                    { 'name': '12:00', 'value': 3 }, { 'name': '13:00', 'value': 3 },
-                    { 'name': '14:00', 'value': 6 }, { 'name': '15:00', 'value': 12 },
-                    { 'name': '16:00', 'value': 20 }, { 'name': '17:00', 'value': 25 },
-                    { 'name': '18:00', 'value': 30 }, { 'name': '19:00', 'value': 40 },
-                    { 'name': '20:00', 'value': 34 }, { 'name': '21:00', 'value': 34 },
-                    { 'name': '22:00', 'value': 25 }, { 'name': '23:00', 'value': 20 }
-                ]
-            },
-            {
                 'name': 'Instagram',
-                'series': [
-                    { 'name': '00:00', 'value': 19 }, { 'name': '01:00', 'value': 5 },
-                    { 'name': '02:00', 'value': 0 }, { 'name': '03:00', 'value': 0 },
-                    { 'name': '04:00', 'value': 0 }, { 'name': '05:00', 'value': 0 },
-                    { 'name': '06:00', 'value': 0 }, { 'name': '07:00', 'value': 0 },
-                    { 'name': '08:00', 'value': 0 }, { 'name': '09:00', 'value': 0 },
-                    { 'name': '10:00', 'value': 1 }, { 'name': '11:00', 'value': 4 },
-                    { 'name': '12:00', 'value': 3 }, { 'name': '13:00', 'value': 7 },
-                    { 'name': '14:00', 'value': 8 }, { 'name': '15:00', 'value': 7 },
-                    { 'name': '16:00', 'value': 11 }, { 'name': '17:00', 'value': 25 },
-                    { 'name': '18:00', 'value': 29 }, { 'name': '19:00', 'value': 32 },
-                    { 'name': '20:00', 'value': 50 }, { 'name': '21:00', 'value': 48 },
-                    { 'name': '22:00', 'value': 45 }, { 'name': '23:00', 'value': 47 }
-                ]
+                'series': instagramArray
             },
             {
                 'name': 'Tweeter',
-                'series': [
-                    { 'name': '00:00', 'value': 4 }, { 'name': '01:00', 'value': 2 },
-                    { 'name': '02:00', 'value': 0 }, { 'name': '03:00', 'value': 0 },
-                    { 'name': '04:00', 'value': 0 }, { 'name': '05:00', 'value': 0 },
-                    { 'name': '06:00', 'value': 0 }, { 'name': '07:00', 'value': 0 },
-                    { 'name': '08:00', 'value': 0 }, { 'name': '09:00', 'value': 0 },
-                    { 'name': '10:00', 'value': 0 }, { 'name': '11:00', 'value': 0 },
-                    { 'name': '12:00', 'value': 1 }, { 'name': '13:00', 'value': 1 },
-                    { 'name': '14:00', 'value': 2 }, { 'name': '15:00', 'value': 1 },
-                    { 'name': '16:00', 'value': 4 }, { 'name': '17:00', 'value': 5 },
-                    { 'name': '18:00', 'value': 1 }, { 'name': '19:00', 'value': 3 },
-                    { 'name': '20:00', 'value': 10 }, { 'name': '21:00', 'value': 6 },
-                    { 'name': '22:00', 'value': 6 }, { 'name': '23:00', 'value': 7 }
-                ]
+                'series': twitterArray
             }
         ];
     };
@@ -367,12 +337,120 @@ var ActivityAnalizerComponent = (function () {
             template: __webpack_require__("../../../../../src/app/components/activity-analizer/activity-analizer.component.html"),
             styles: [__webpack_require__("../../../../../src/app/components/activity-analizer/activity-analizer.component.scss")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_internetActivity_internet_activity_service__["a" /* InternetActivityService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_internetActivity_internet_activity_service__["a" /* InternetActivityService */]) === "function" && _a || Object])
     ], ActivityAnalizerComponent);
     return ActivityAnalizerComponent;
+    var _a;
 }());
 
 //# sourceMappingURL=activity-analizer.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/add-followed-user/add-followed-user.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"add-user-root\">\n  <div class=\"add-user-header\">\n    <span class=\"add-user-header-content\">Connect user with account</span>\n  </div>\n  <div class=\"add-user-content\">\n    <div class=\"search-div\">\n      <input class=\"user-id-input\" type=\"text\" #userId/>\n      <button id=\"search-btn\" class=\"search-btn\" (click)=\"searchClick(userId.value)\">Search</button>\n    </div>\n    <div class=\"result-list\">\n      <div class=\"userData\" *ngFor=\"let user of searchedUserArray\" (dblclick)=\"onUserDblClick(user)\">\n        <img class=\"user-icon-circle\" src=\"https://i.kinja-img.com/gawker-media/image/upload/s--3lzma_MB--/c_fit,fl_progressive,q_80,w_320/18bdwssyxpibxjpg.jpg\"/>\n        <div class=\"user-name\">{{user.fullName}} - Facebook</div>\n      </div>\n    </div>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/add-followed-user/add-followed-user.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".add-user-root {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  padding: 2em; }\n\n.add-user-header-content {\n  font-size: 2em;\n  font-weight: bold; }\n\n.add-user-content {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  padding-top: 5em; }\n\n.user-data {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n  padding: 1em;\n  -webkit-box-flex: 0;\n      -ms-flex: 0 20%;\n          flex: 0 20%;\n  font-weight: bold;\n  background-color: rgba(49, 48, 48, 0.11);\n  max-height: 29em; }\n\n.user-icon-circle {\n  height: 5em;\n  width: 5em;\n  border-radius: 50%;\n  margin-right: 1em; }\n\n.search-div {\n  width: 50em; }\n\n.user-id-input {\n  width: 40em; }\n\n.search-btn {\n  width: 9.65em; }\n\n.result-list {\n  border: 0.1em solid black;\n  width: 50em;\n  height: 30em;\n  max-height: 30em;\n  overflow-y: scroll; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/add-followed-user/add-followed-user.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddFollowedUserComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_authentication_authentication_service__ = __webpack_require__("../../../../../src/app/services/authentication/authentication.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_followedUsers_followed_users_service__ = __webpack_require__("../../../../../src/app/services/followedUsers/followed.users.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var AddFollowedUserComponent = (function () {
+    function AddFollowedUserComponent(authService, http, route, followedUsersService) {
+        this.authService = authService;
+        this.http = http;
+        this.route = route;
+        this.followedUsersService = followedUsersService;
+        this.searchedUserArray = [];
+    }
+    AddFollowedUserComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        debugger;
+        this.route.queryParams.subscribe(function (params) {
+            debugger;
+            _this.social = params['social'];
+        });
+    };
+    AddFollowedUserComponent.prototype.searchClick = function (userId) {
+        var _this = this;
+        var accessTokens = this.authService.getAccessTokens();
+        var baseUrl = 'http://localhost:50985/api/searchUser';
+        var userIdUrlPart = "userId=" + userId;
+        var facebookUrlPart = this.social == 'facebook' ? "facebookAccessToken=" + accessTokens.Facebook : 'facebookAccessToken=null';
+        var instagramUrlPart = this.social == 'instagram' ? "instagramAccessToken=" + accessTokens.Instagram : 'instagramAccessToken=null';
+        var twitterUrlPart = this.social == 'twitter' ? "twitterAccessToken=" + accessTokens.Twitter : 'twitterAccessToken=null';
+        this.http.get("http://localhost:50985/api/searchUser?" + userIdUrlPart + "&" + facebookUrlPart + "&" + instagramUrlPart + "&" + twitterUrlPart)
+            .subscribe(function (result) {
+            var searchResult = result.json();
+            _this.searchedUserArray = searchResult.searchedUsers;
+        });
+    };
+    AddFollowedUserComponent.prototype.onUserDblClick = function (userModel) {
+        var postHeaders = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Headers */]();
+        postHeaders.append('Accept', 'application/json');
+        postHeaders.append('Content-Type', 'application/json');
+        var options = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["d" /* RequestOptions */]({ headers: postHeaders });
+        var accessTokens = this.authService.getAccessTokens();
+        userModel.userId = this.followedUsersService.currentSelectedFollowedUser.getValue().id;
+        this.http.put('http://localhost:50985/api/followedUser', { searchUser: userModel, accessTokens: accessTokens }, options)
+            .subscribe((function (result) {
+            console.log('abc');
+        }));
+    };
+    AddFollowedUserComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-add-followed-user',
+            template: __webpack_require__("../../../../../src/app/components/add-followed-user/add-followed-user.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/components/add-followed-user/add-followed-user.component.scss")]
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_authentication_authentication_service__["a" /* AuthenticationService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_authentication_authentication_service__["a" /* AuthenticationService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* ActivatedRoute */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__services_followedUsers_followed_users_service__["a" /* FollowedUsersService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_followedUsers_followed_users_service__["a" /* FollowedUsersService */]) === "function" && _d || Object])
+    ], AddFollowedUserComponent);
+    return AddFollowedUserComponent;
+    var _a, _b, _c, _d;
+}());
+
+//# sourceMappingURL=add-followed-user.component.js.map
 
 /***/ }),
 
@@ -669,6 +747,7 @@ module.exports = module.exports.toString();
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CharacterAnalizerComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__models_chart_chart_model__ = __webpack_require__("../../../../../src/app/models/chart/chart.model.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_followedUsers_followed_users_service__ = __webpack_require__("../../../../../src/app/services/followedUsers/followed.users.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -680,8 +759,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var CharacterAnalizerComponent = (function () {
-    function CharacterAnalizerComponent() {
+    function CharacterAnalizerComponent(followedUsersService) {
+        this.followedUsersService = followedUsersService;
+        this.followedUser = this.followedUsersService.currentSelectedFollowedUser.getValue();
         this.initSentimentChartModel();
     }
     CharacterAnalizerComponent.prototype.ngOnInit = function () {
@@ -704,11 +786,11 @@ var CharacterAnalizerComponent = (function () {
         this.sentimentChartModel.data = [
             {
                 'name': 'positive',
-                'value': 15
+                'value': this.followedUser.characterData.positiveOpinions
             },
             {
                 'name': 'negative',
-                'value': 8
+                'value': this.followedUser.characterData.negativeOpinions
             }
         ];
     };
@@ -718,9 +800,10 @@ var CharacterAnalizerComponent = (function () {
             template: __webpack_require__("../../../../../src/app/components/character-analizer/character-analizer.component.html"),
             styles: [__webpack_require__("../../../../../src/app/components/character-analizer/character-analizer.component.scss")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_followedUsers_followed_users_service__["a" /* FollowedUsersService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_followedUsers_followed_users_service__["a" /* FollowedUsersService */]) === "function" && _a || Object])
     ], CharacterAnalizerComponent);
     return CharacterAnalizerComponent;
+    var _a;
 }());
 
 //# sourceMappingURL=character-analizer.component.js.map
@@ -730,7 +813,7 @@ var CharacterAnalizerComponent = (function () {
 /***/ "../../../../../src/app/components/dashboard/dashboard.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"dashboard-root\">\n  <div class=\"data-row\">\n    <div class=\"user-data\">\n      <img class=\"user-icon-circle\" src=\"../../../assets/images/unknowPerson.jpg\"/>\n      <div class=\"user-name\">{{currentFollowedUser.personalData.firstName}} {{currentFollowedUser.personalData.lastName}}</div>\n    </div>\n    <div class=\"social-page\">\n      <button class=\"data-btn\">Use Facebook</button>\n      <button class=\"data-btn\">Use Instagram</button>\n      <button class=\"data-btn\">Use Tweeter</button>\n    </div>\n  </div>\n  <div class=\"data-row\">\n    <div class=\"personal-data analize-rect\">\n      <button class=\"data-btn btn-primary\">Personal Data</button>\n    </div>\n    <div class=\"location-analizer analize-rect\">\n      <button class=\"data-btn data-btn btn-primary\">Location Analizer</button>\n    </div>\n  </div>\n  <div class=\"data-row\">\n    <div class=\"activity-analizer analize-rect\">\n      <button class=\"data-btn data-btn btn-primary\">Internet Activity Analizer</button>\n    </div>\n    <div class=\"character-analizer analize-rect\">\n      <button class=\"data-btn data-btn btn-primary\">Character Analizer</button>\n    </div>\n  </div>\n</div>"
+module.exports = "<div class=\"dashboard-root\">\n  <div class=\"data-row\">\n    <div class=\"user-data\">\n      <img class=\"user-icon-circle\" src=\"../../../assets/images/unknowPerson.jpg\"/>\n      <div class=\"user-name\">{{currentFollowedUser.personalData.firstName}} {{currentFollowedUser.personalData.lastName}}</div>\n    </div>\n    <div class=\"social-page\">\n      <button class=\"data-btn\" (click)=\"facebookRefresh()\">Use Facebook</button>\n      <button class=\"data-btn\" (click)=\"instagramRefresh()\">Use Instagram</button>\n      <button class=\"data-btn\" (click)=\"twitterRefresh()\">Use Tweeter</button>\n    </div>\n  </div>\n  <div class=\"data-row\">\n    <div class=\"personal-data analize-rect\">\n      <button class=\"data-btn btn-primary\">Personal Data</button>\n    </div>\n    <div class=\"location-analizer analize-rect\">\n      <button class=\"data-btn data-btn btn-primary\">Location Analizer</button>\n    </div>\n  </div>\n  <div class=\"data-row\">\n    <div class=\"activity-analizer analize-rect\">\n      <button class=\"data-btn data-btn btn-primary\">Internet Activity Analizer</button>\n    </div>\n    <div class=\"character-analizer analize-rect\">\n      <button class=\"data-btn data-btn btn-primary\">Character Analizer</button>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -779,8 +862,16 @@ var DashboardComponent = (function () {
         this.followedUserService = followedUserService;
     }
     DashboardComponent.prototype.ngOnInit = function () {
-        debugger;
         this.currentFollowedUser = this.followedUserService.currentSelectedFollowedUser.getValue();
+    };
+    DashboardComponent.prototype.facebookRefresh = function () {
+        this.followedUserService.refreshFacebookData(this.currentFollowedUser.facebookId);
+    };
+    DashboardComponent.prototype.instagramRefresh = function () {
+        this.followedUserService.refreshInstagramData(this.currentFollowedUser.instagramId);
+    };
+    DashboardComponent.prototype.twitterRefresh = function () {
+        this.followedUserService.refreshTwitterData(this.currentFollowedUser.twitterId);
     };
     DashboardComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -801,7 +892,7 @@ var DashboardComponent = (function () {
 /***/ "../../../../../src/app/components/location-analizer/location-analizer.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"location-root\">\n  <div class=\"location-header\">\n    <span class=\"location-header-content\">Location analizer</span>\n  </div>\n  <div class=\"location-content\">\n    <div class=\"location-data\">\n      <div class=\"user-data\">\n        <div>\n          <label>Name:</label>\n          <span>Bill Gates</span>\n        </div>\n        <div>\n          <label>Hometown:</label>\n          <span>Los Angeles</span>\n        </div>\n        <div>\n          <label>Current town:</label>\n          <span>Los Angeles</span>\n        </div>\n      </div>\n    </div>\n    <div class=\"map\">\n      <label class=\"map-label\">User localization history:</label>\n      <agm-map [latitude]=\"lat\" [longitude]=\"lng\">\n        <agm-marker [latitude]=\"lat\" [longitude]=\"lng\"></agm-marker>\n      </agm-map>\n    </div>\n  </div>\n</div>"
+module.exports = "<div class=\"location-root\">\n  <div class=\"location-header\">\n    <span class=\"location-header-content\">Location analizer</span>\n  </div>\n  <div class=\"location-content\">\n    <div class=\"location-data\">\n      <div class=\"user-data\">\n        <div>\n          <label>Name:</label>\n          <span>{{followedUser.personalData.firstName}} {{followedUser.personalData.lastName}}</span>\n        </div>\n        <div>\n          <label>Hometown:</label>\n          <span></span>\n        </div>\n        <div>\n          <label>Current town:</label>\n          <span></span>\n        </div>\n      </div>\n    </div>\n    <div class=\"map\">\n      <label class=\"map-label\">User localization history:</label>\n      <agm-map [latitude]=\"startLat\" [longitude]=\"startLog\">\n        <agm-marker *ngFor=\"let loc of localizationArray\" [latitude]=\"loc.latitude\" [longitude]=\"loc.longitude\"></agm-marker>\n      </agm-map>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -829,26 +920,50 @@ module.exports = module.exports.toString();
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LocationAnalizerComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_localization_localization_service__ = __webpack_require__("../../../../../src/app/services/localization/localization.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_followedUsers_followed_users_service__ = __webpack_require__("../../../../../src/app/services/followedUsers/followed.users.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
 
 var LocationAnalizerComponent = (function () {
-    function LocationAnalizerComponent() {
-        this.lat = 51.1079;
-        this.lng = 17.0385;
+    function LocationAnalizerComponent(localizationService, followedUserService) {
+        this.localizationService = localizationService;
+        this.followedUserService = followedUserService;
+        this.localizationArray = [];
+        this.startLat = 0;
+        this.startLog = 0;
     }
+    LocationAnalizerComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.localizationService.getForCurrentUser().subscribe(function (result) {
+            var localizations = result.json();
+            _this.localizationArray = localizations;
+            if (_this.localizationArray.length > 0) {
+                _this.startLat = _this.localizationArray[0].latitude;
+                _this.startLog = _this.localizationArray[0].longitude;
+            }
+        });
+        this.followedUser = this.followedUserService.currentSelectedFollowedUser.getValue();
+    };
     LocationAnalizerComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-location-analizer',
             template: __webpack_require__("../../../../../src/app/components/location-analizer/location-analizer.component.html"),
             styles: [__webpack_require__("../../../../../src/app/components/location-analizer/location-analizer.component.scss")]
-        })
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_localization_localization_service__["a" /* LocalizationService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_localization_localization_service__["a" /* LocalizationService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_followedUsers_followed_users_service__["a" /* FollowedUsersService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_followedUsers_followed_users_service__["a" /* FollowedUsersService */]) === "function" && _b || Object])
     ], LocationAnalizerComponent);
     return LocationAnalizerComponent;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=location-analizer.component.js.map
@@ -858,7 +973,7 @@ var LocationAnalizerComponent = (function () {
 /***/ "../../../../../src/app/components/personal-data/personal-data.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"personal-root\">\n  <div class=\"personal-header\">\n    <span class=\"personal-header-content\">Personal Data</span>\n  </div>\n  <div class=\"personal-content\">\n    <div class=\"personal-data\">\n      <div>\n        <label>Name: </label>\n        <span>Bill Gates</span>\n      </div>\n      <div>\n        <label>Gender: </label>\n        <span>Male</span>\n      </div>\n      <div>\n        <label>Birthdate: </label>\n        <span>18-12-1994</span>\n      </div>\n      <div>\n        <label>Adress: </label>\n        <span>OC Maryland</span>\n      </div>\n      <div>\n        <label>Email: </label>\n        <span>bill.gates@gmail.com</span>\n      </div>\n    </div>\n    <div class=\"photos\">\n      <label class=\"photos-header\">Photos: </label>\n      <div class=\"photos-content\">\n        <div class=\"photo-row\">\n          <div class=\"photo\">\n            <img src=\"../../../assets/images/unknowPerson.jpg\"/>\n          </div>\n          <div class=\"photo\">\n            <img src=\"../../../assets/images/unknowPerson.jpg\"/>\n          </div>\n          <div class=\"photo\">\n            <img src=\"../../../assets/images/unknowPerson.jpg\"/>\n          </div>\n        </div>\n        <div class=\"photo-row\"> \n          <div class=\"photo\">\n            <img src=\"../../../assets/images/unknowPerson.jpg\"/>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div class=\"personal-root\">\n  <div class=\"personal-header\">\n    <span class=\"personal-header-content\">Personal Data</span>\n  </div>\n  <div class=\"personal-content\">\n    <div class=\"personal-data\">\n      <div>\n        <label>Name: </label>\n        <span>{{followedUserPersonalData.firstName}} {{followedUserPersonalData.lastName}}</span>\n      </div>\n      <div>\n        <label>Gender: </label>\n        <span></span>\n      </div>\n      <div>\n        <label>Birthdate: </label>\n        <span>{{followedUserPersonalData.birthDate}}</span>\n      </div>\n      <div>\n        <label>Adress: </label>\n        <span></span>\n      </div>\n      <div>\n        <label>Email: </label>\n        <span>{{followedUserPersonalData.email}}</span>\n      </div>\n    </div>\n    <div class=\"photos\">\n      <label class=\"photos-header\">Photos: </label>\n      <div class=\"photos-content\">\n        <div class=\"photo-row\">\n          <div class=\"photo\">\n            <img src=\"../../../assets/images/unknowPerson.jpg\"/>\n          </div>\n          <div class=\"photo\">\n            <img src=\"../../../assets/images/unknowPerson.jpg\"/>\n          </div>\n          <div class=\"photo\">\n            <img src=\"../../../assets/images/unknowPerson.jpg\"/>\n          </div>\n        </div>\n        <div class=\"photo-row\"> \n          <div class=\"photo\">\n            <img src=\"../../../assets/images/unknowPerson.jpg\"/>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -886,6 +1001,7 @@ module.exports = module.exports.toString();
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PersonalDataComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_followedUsers_followed_users_service__ = __webpack_require__("../../../../../src/app/services/followedUsers/followed.users.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -896,10 +1012,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var PersonalDataComponent = (function () {
-    function PersonalDataComponent() {
+    function PersonalDataComponent(followedUserService) {
+        this.followedUserService = followedUserService;
     }
     PersonalDataComponent.prototype.ngOnInit = function () {
+        this.followedUserPersonalData = this.followedUserService.currentSelectedFollowedUser.getValue().personalData;
     };
     PersonalDataComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -907,9 +1026,10 @@ var PersonalDataComponent = (function () {
             template: __webpack_require__("../../../../../src/app/components/personal-data/personal-data.component.html"),
             styles: [__webpack_require__("../../../../../src/app/components/personal-data/personal-data.component.scss")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_followedUsers_followed_users_service__["a" /* FollowedUsersService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_followedUsers_followed_users_service__["a" /* FollowedUsersService */]) === "function" && _a || Object])
     ], PersonalDataComponent);
     return PersonalDataComponent;
+    var _a;
 }());
 
 //# sourceMappingURL=personal-data.component.js.map
@@ -970,13 +1090,11 @@ var SideNavigationComponent = (function () {
     }
     SideNavigationComponent.prototype.ngOnInit = function () {
         var _this = this;
-        debugger;
         this.followedUsersService.followedUsers.subscribe(function (followedUsersArray) {
             _this.followedUsers = followedUsersArray;
         });
     };
     SideNavigationComponent.prototype.dashboardClick = function (followedUser) {
-        debugger;
         this.followedUsersService.currentSelectedFollowedUser.next(followedUser);
         this.router.navigate(['dashboard']);
     };
@@ -1183,6 +1301,8 @@ var AuthenticationService = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_BehaviorSubject__ = __webpack_require__("../../../../rxjs/BehaviorSubject.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_BehaviorSubject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_BehaviorSubject__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__authentication_authentication_service__ = __webpack_require__("../../../../../src/app/services/authentication/authentication.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1195,38 +1315,181 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 var FollowedUsersService = (function () {
-    function FollowedUsersService(http) {
+    function FollowedUsersService(http, authService, route, router) {
         this.http = http;
+        this.authService = authService;
+        this.route = route;
+        this.router = router;
         this.followedUsers = new __WEBPACK_IMPORTED_MODULE_1_rxjs_BehaviorSubject__["BehaviorSubject"]([]);
         this.currentSelectedFollowedUser = new __WEBPACK_IMPORTED_MODULE_1_rxjs_BehaviorSubject__["BehaviorSubject"](null);
-        debugger;
         this.load();
     }
     FollowedUsersService.prototype.ngOnInit = function () {
-        // debugger;
-        // this.load();
     };
     FollowedUsersService.prototype.load = function () {
         var _this = this;
-        debugger;
         var followedUsersUrl = 'http://localhost:50985/api/followedUser';
         this.http.get(followedUsersUrl)
             .subscribe(function (result) {
             var followedUsersResult = result.json();
-            debugger;
             _this.followedUsers.next(followedUsersResult.followedUserArray);
         });
     };
+    FollowedUsersService.prototype.refreshFacebookData = function (facebookId) {
+        var facebookAccessToken = this.authService.getCurrentFacebookAccessToken();
+        if (!facebookAccessToken) {
+            this.authService.loginFacebookUser();
+        }
+        else {
+            if (!facebookId) {
+                this.router.navigate(['addfolloweduser'], { queryParams: { social: 'facebook' } });
+            }
+            else {
+                var followedUserFbRefreshUrl = 'http://localhost:50985/api/followedUser/refreshFacebook?facebookId=' + facebookId
+                    + '&accessToken=' + facebookAccessToken;
+                this.http.get(followedUserFbRefreshUrl)
+                    .subscribe(function (result) {
+                    console.log('Facebok user refreshed');
+                });
+            }
+        }
+    };
+    FollowedUsersService.prototype.refreshInstagramData = function (instagramId) {
+        var instagramAccessToken = this.authService.getCurrentInstagramAccessToken();
+        if (!instagramAccessToken) {
+            this.authService.loginInstagramUser();
+        }
+        else {
+            if (!instagramId) {
+                //window.location.href = 'http://localhost:50985/addfolloweduser?social=instagram';;
+                this.router.navigate(['addfolloweduser'], { queryParams: { social: 'instagram' } });
+            }
+            else {
+                var followedUserInstaRefreshUrl = 'http://localhost:50985/api/followedUser/refreshInstagram?instagramId=' + instagramId
+                    + '&accessToken=' + instagramAccessToken;
+                this.http.get(followedUserInstaRefreshUrl)
+                    .subscribe(function (result) {
+                    console.log('Instagram user refreshed');
+                });
+            }
+        }
+    };
+    FollowedUsersService.prototype.refreshTwitterData = function (twitterId) {
+        var twitterAccessToken = this.authService.getCurrentTwitterAccessToken();
+        if (!twitterAccessToken) {
+            this.authService.loginTwitterUser();
+        }
+        else {
+            if (!twitterId) {
+                this.router.navigate(['addfolloweduser'], { queryParams: { social: 'twitter' } });
+            }
+            else {
+                var followedUserTwitterRefreshUrl_1 = 'http://localhost:50985/api/followedUser/refreshTwitter?twitterId=' + twitterId
+                    + '&accessToken=' + twitterAccessToken;
+                this.http.get(followedUserTwitterRefreshUrl_1)
+                    .subscribe(function (result) {
+                    console.log(followedUserTwitterRefreshUrl_1);
+                });
+            }
+        }
+    };
     FollowedUsersService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["Injectable"])(),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_http__["b" /* Http */]) === "function" && _a || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_http__["b" /* Http */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__authentication_authentication_service__["a" /* AuthenticationService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__authentication_authentication_service__["a" /* AuthenticationService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_router__["a" /* ActivatedRoute */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_router__["b" /* Router */]) === "function" && _d || Object])
     ], FollowedUsersService);
     return FollowedUsersService;
-    var _a;
+    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=followed.users.service.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/services/internetActivity/internet.activity.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return InternetActivityService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__followedUsers_followed_users_service__ = __webpack_require__("../../../../../src/app/services/followedUsers/followed.users.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var InternetActivityService = (function () {
+    function InternetActivityService(http, followedUserService) {
+        this.http = http;
+        this.followedUserService = followedUserService;
+    }
+    InternetActivityService.prototype.load = function () {
+        var userId = this.followedUserService.currentSelectedFollowedUser.getValue().id;
+        var internetActivityUrl = 'http://localhost:50985/api/internetActivity?userId=' + userId;
+        return this.http.get(internetActivityUrl);
+    };
+    InternetActivityService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__followedUsers_followed_users_service__["a" /* FollowedUsersService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__followedUsers_followed_users_service__["a" /* FollowedUsersService */]) === "function" && _b || Object])
+    ], InternetActivityService);
+    return InternetActivityService;
+    var _a, _b;
+}());
+
+//# sourceMappingURL=internet.activity.service.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/services/localization/localization.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LocalizationService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__followedUsers_followed_users_service__ = __webpack_require__("../../../../../src/app/services/followedUsers/followed.users.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var LocalizationService = (function () {
+    function LocalizationService(http, followedUserService) {
+        this.http = http;
+        this.followedUserService = followedUserService;
+    }
+    LocalizationService.prototype.getForCurrentUser = function () {
+        debugger;
+        var followedUser = this.followedUserService.currentSelectedFollowedUser.getValue();
+        var localizationUrl = 'http://localhost:50985/api/localization?userId=' + followedUser.id;
+        return this.http.get(localizationUrl);
+    };
+    LocalizationService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__followedUsers_followed_users_service__["a" /* FollowedUsersService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__followedUsers_followed_users_service__["a" /* FollowedUsersService */]) === "function" && _b || Object])
+    ], LocalizationService);
+    return LocalizationService;
+    var _a, _b;
+}());
+
+//# sourceMappingURL=localization.service.js.map
 
 /***/ }),
 

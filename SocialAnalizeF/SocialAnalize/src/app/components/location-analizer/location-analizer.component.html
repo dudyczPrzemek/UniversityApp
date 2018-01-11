@@ -7,22 +7,22 @@
       <div class="user-data">
         <div>
           <label>Name:</label>
-          <span>Bill Gates</span>
+          <span>{{followedUser.personalData.firstName}} {{followedUser.personalData.lastName}}</span>
         </div>
         <div>
           <label>Hometown:</label>
-          <span>Los Angeles</span>
+          <span></span>
         </div>
         <div>
           <label>Current town:</label>
-          <span>Los Angeles</span>
+          <span></span>
         </div>
       </div>
     </div>
     <div class="map">
       <label class="map-label">User localization history:</label>
-      <agm-map [latitude]="lat" [longitude]="lng">
-        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+      <agm-map [latitude]="startLat" [longitude]="startLog">
+        <agm-marker *ngFor="let loc of localizationArray" [latitude]="loc.latitude" [longitude]="loc.longitude"></agm-marker>
       </agm-map>
     </div>
   </div>

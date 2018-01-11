@@ -41,6 +41,10 @@ namespace SA.Backend.Repositories
             Context = context;
         }
 
+        public FollowedUser FindFollowedUserById(int followedUserId)
+        {
+            return Context.FollowedUser.FirstOrDefault(x => x.Id == followedUserId);
+        }
         public FollowedUser FindUserWithFacebookId(string facebookId)
         {
             return Context.FollowedUser.FirstOrDefault(x => x.FacebookId.Equals(facebookId));
@@ -48,12 +52,12 @@ namespace SA.Backend.Repositories
 
         public FollowedUser FindUserWithInstagramId(string instagramId)
         {
-            return Context.FollowedUser.FirstOrDefault(x => x.FacebookId.Equals(instagramId));
+            return Context.FollowedUser.FirstOrDefault(x => x.InstagramId.Equals(instagramId));
         }
 
         public FollowedUser FindUserWithTwitterId(string twitterId)
         {
-            return Context.FollowedUser.FirstOrDefault(x => x.FacebookId.Equals(twitterId));
+            return Context.FollowedUser.FirstOrDefault(x => x.TwitterId.Equals(twitterId));
         }
 
         public FollowedUser AddFollowedUser(FollowedUser followedUser)
@@ -96,7 +100,7 @@ namespace SA.Backend.Repositories
 
         public IList<FollowedUser> GetFollowedUsers()
         {
-            return Context.FollowedUser.Include("PersonalData").ToList();
+            return Context.FollowedUser.Include("PersonalData").Include("CharacterData").ToList();
         }
     }
 }

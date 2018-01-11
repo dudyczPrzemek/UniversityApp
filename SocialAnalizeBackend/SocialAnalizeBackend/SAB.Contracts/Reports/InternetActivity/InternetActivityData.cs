@@ -10,7 +10,7 @@ namespace SA.Contracts.Reports.InternetActivity
     {
         public int Id { get; set; }
         object IHasId.Id => Id;
-        public HashtagDetails HashtagDetails { get; set; }
-        public HourActivityDetails HourActivityDetails { get; set; }
+        public IList<HourActivityDetails> HourActivityDetails { get; set; }
+        public IList<HashtagDetails> HashtagsDetails { get; set; }
     }
 }

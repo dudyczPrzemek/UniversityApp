@@ -18,4 +18,16 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
     this.currentFollowedUser = this.followedUserService.currentSelectedFollowedUser.getValue();
   }
+
+  public facebookRefresh() {
+    this.followedUserService.refreshFacebookData(this.currentFollowedUser.facebookId);
+  }
+
+  public instagramRefresh() {
+    this.followedUserService.refreshInstagramData(this.currentFollowedUser.instagramId);
+  }
+
+  public twitterRefresh() {
+    this.followedUserService.refreshTwitterData(this.currentFollowedUser.twitterId);
+  }
 }

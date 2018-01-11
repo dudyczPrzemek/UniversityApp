@@ -6,6 +6,7 @@ namespace SA.Contracts.User
 {
     public class SearchUserUnitModel
     {
+        public int UserId { get; set; }
         public string FacebookId { get; set; }
         public string InstagramId { get; set; }
         public string TwitterId { get; set; }

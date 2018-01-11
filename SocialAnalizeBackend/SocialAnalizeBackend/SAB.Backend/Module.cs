@@ -26,6 +26,12 @@ using SA.Contracts.User.Commands;
 using SA.Backend.Repositories.Interfaces;
 using SA.Backend.Repositories;
 using SA.Contracts.Facebook.User;
+using SA.Contracts.Reports.Localization.Queries;
+using SA.Contracts.Reports.Localization;
+using SA.Backend.Reports.Localization;
+using SA.Contracts.Reports.InternetActivity.Queries;
+using SA.Contracts.Reports.InternetActivity;
+using SA.Backend.Reports.InternetActivity;
 
 namespace SA.Backend
 {
@@ -51,19 +57,29 @@ namespace SA.Backend
             //FACEBOOK
             services.RegisterAsyncQueryHandler<GetFacebookUser, FacebookUser, FacebookUserQueryHandler>();
             services.RegisterAsyncQueryHandler<GetFacebookAccessToken, string, FacebookUserQueryHandler>();
+            services.RegisterAsyncQueryHandler<RefreshIntagramUserData, bool, FacebookUserQueryHandler>();
             services.RegisterAsyncCommandHandler<CreateFacebookUser, FacebookUserCommandHandler>();
 
             //TWITTER
             services.RegisterAsyncQueryHandler<GetTwitterAccessToken, string, TwitterUserQueryHandler>();
+            services.RegisterAsyncQueryHandler<RefreshTwitterDataUser, bool, TwitterUserQueryHandler>();
             services.RegisterAsyncCommandHandler<RefreshTwitterUserData, TwitterUserCommandHandler>();
 
             //INSTAGRAM
             services.RegisterAsyncQueryHandler<GetInstagramAccessToken, string, InstagramUserQueryHandler>();
+            services.RegisterAsyncQueryHandler<RefreshInstagramUserData, bool, InstagramUserQueryHandler>();
             services.RegisterAsyncCommandHandler<RefreshInstagramRecentMedia, InstagramUserCommandHandler>();
 
             services.RegisterAsyncQueryHandler<GetSearchedUser, SearchUserModel, UserQueryHandler>();
             services.RegisterAsyncQueryHandler<GetFollowedUsers, IList<FollowedUser>, UserQueryHandler>();
             services.RegisterAsyncCommandHandler<AddUser, UserCommandHandler>();
+            services.RegisterAsyncCommandHandler<UpdateFollowedUser, UserCommandHandler>();
+
+            //LOCALIZATION
+            services.RegisterAsyncQueryHandler<GetUserLocalization, IList<Localization>, LocalizationQueryHandler>();
+
+            //INTERNETACTIVITY
+            services.RegisterAsyncQueryHandler<GetUserInternetActivity, InternetActivityData, InternetActivityQueryHandler>();
         }
 
         private void RegisterRepositories(IServiceCollection services)
@@ -80,6 +96,9 @@ namespace SA.Backend
             services.AddEFCRUDRepository<SAContext, FollowedUser>();
 
             services.AddScoped<IFollowedUserRepository, FollowedUserRepository>();
+            services.AddScoped<ILocalizationRepository, LocalizationRepository>();
+            services.AddScoped<IHourActivityRepository, HourActivityRepository>();
+            services.AddScoped<IHashtagDetailsRepository, HashtagDetailsRepository>();
 
             services.AddSingleton<IFacebookRepository, FacebookRepository>();
             services.AddSingleton<IInstagramRepository, InstagramRepository>();

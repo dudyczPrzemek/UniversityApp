@@ -7,12 +7,14 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { AuthenticationComponent } from './components/authentication/authentication.component';
+import { AddFollowedUserComponent } from './components/add-followed-user/add-followed-user.component';
 
 const routes: Routes = [
     { path: '', redirectTo: 'login', pathMatch: 'full' },
     { path: 'login', component: AuthenticationComponent },
     { path: 'dashboard', component: DashboardComponent },
     { path: 'addpage', component: AddStartPageComponent},
+    { path: 'addfolloweduser', component: AddFollowedUserComponent},
     { path: 'pesronaldata', component: PersonalDataComponent},
     { path: 'locationanalizer', component: LocationAnalizerComponent},
     { path: 'activityanalizer', component: ActivityAnalizerComponent},

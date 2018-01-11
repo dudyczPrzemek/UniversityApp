@@ -16,7 +16,6 @@ namespace SA.Contracts.User
         public string TwitterId { get; set; }
         public CharacterData CharacterData { get; set; }
         public PersonalData PersonalData { get; set; }
-        public Localization LocalizationData { get; set; }
         public InternetActivityData InternetActivityData { get; set; }
         public User User { get; set; }
     }

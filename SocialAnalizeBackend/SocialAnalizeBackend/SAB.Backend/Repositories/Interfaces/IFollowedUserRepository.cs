@@ -10,6 +10,7 @@ namespace SA.Backend.Repositories.Interfaces
 {
     public interface IFollowedUserRepository
     {
+        FollowedUser FindFollowedUserById(int followedUserId);
         FollowedUser FindUserWithFacebookId(string facebookId);
         FollowedUser FindUserWithInstagramId(string instagramId);
         FollowedUser FindUserWithTwitterId(string twitterId);

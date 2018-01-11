@@ -10,13 +10,17 @@ using System.Threading.Tasks;
 
 namespace SA.Backend.User
 {
-    public class UserCommandHandler : IAsyncCommandHandler<AddUser> 
+    public class UserCommandHandler : 
+        IAsyncCommandHandler<AddUser>,
+        IAsyncCommandHandler<UpdateFollowedUser>
     {
         private readonly IFollowedUserRepository followedUserRepository;
+        private readonly CRUDRepository<FollowedUser> followedUserCrudRepository;
 
-        public UserCommandHandler(IFollowedUserRepository followedUserRepository)
+        public UserCommandHandler(IFollowedUserRepository followedUserRepository, CRUDRepository<FollowedUser> followedUserCrudRepository)
         {
             this.followedUserRepository = followedUserRepository;
+            this.followedUserCrudRepository = followedUserCrudRepository;
         }
 
         public async Task Handle(AddUser userData)
@@ -80,6 +84,37 @@ namespace SA.Backend.User
 
                 await followedUserRepository.RefreshFollowedUserData(followedUser, userData.AccessTokens);
             }
+        }
+
+        public async Task Handle(UpdateFollowedUser updateUserData)
+        {
+            var followedUser = followedUserRepository.FindFollowedUserById(updateUserData.UserId);
+            if(updateUserData.FacebookId != null)
+            {
+                followedUser.FacebookId = updateUserData.FacebookId;
+
+                followedUserCrudRepository.Update(followedUser);
+                followedUserCrudRepository.SaveChanges();
+            }
+
+            else if (updateUserData.InstagramId != null)
+            {
+                followedUser.InstagramId = updateUserData.InstagramId;
+
+                followedUserCrudRepository.Update(followedUser);
+                followedUserCrudRepository.SaveChanges();
+            }
+
+            else if (updateUserData.TwitterId != null)
+            {
+                followedUser.TwitterId = updateUserData.TwitterId;
+
+                followedUserCrudRepository.Update(followedUser);
+                followedUserCrudRepository.SaveChanges();
+            }
+
+            var updatedUser = followedUserRepository.FindFollowedUserById(updateUserData.UserId);
+            await followedUserRepository.RefreshFollowedUserData(updatedUser, updateUserData.AccessTokens);
         }
     }
 }

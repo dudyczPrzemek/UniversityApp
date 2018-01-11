@@ -1,5 +1,7 @@
 import { ChartModel } from './../../models/chart/chart.model';
 import { Component, OnInit } from '@angular/core';
+import { FollowedUser } from '../../models/users/followed.user';
+import { FollowedUsersService } from '../../services/followedUsers/followed.users.service';
 
 @Component({
   selector: 'app-character-analizer',
@@ -8,8 +10,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CharacterAnalizerComponent implements OnInit {
   public sentimentChartModel: ChartModel;
+  private followedUser: FollowedUser;
 
-  constructor() {
+  constructor(private followedUsersService: FollowedUsersService) {
+    this.followedUser = this.followedUsersService.currentSelectedFollowedUser.getValue();
     this.initSentimentChartModel();
   }
 
@@ -34,11 +38,11 @@ export class CharacterAnalizerComponent implements OnInit {
     this.sentimentChartModel.data = [
       {
         'name': 'positive',
-        'value': 15
+        'value': this.followedUser.characterData.positiveOpinions
       },
       {
         'name': 'negative',
-        'value': 8
+        'value': this.followedUser.characterData.negativeOpinions
       }
     ];
   }

@@ -1,4 +1,6 @@
 export class PersonalData {
-    public FirstName: string;
-    public LastName: string;
+    public firstName: string;
+    public lastName: string;
+    public birthDate: Date;
+    public email: string;
 }

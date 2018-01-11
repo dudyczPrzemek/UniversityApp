@@ -79,9 +79,17 @@ namespace SA.Backend.Migrations
 
                     b.Property<int>("Count");
 
+                    b.Property<int?>("FollowedUserId");
+
+                    b.Property<int?>("InternetActivityDataId");
+
                     b.Property<string>("Name");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("FollowedUserId");
+
+                    b.HasIndex("InternetActivityDataId");
 
                     b.ToTable("HashtagDetails");
                 });
@@ -91,13 +99,21 @@ namespace SA.Backend.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<int?>("FollowedUserId");
+
                     b.Property<int>("Hour");
+
+                    b.Property<int?>("InternetActivityDataId");
 
                     b.Property<int>("Mentions");
 
                     b.Property<string>("Source");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("FollowedUserId");
+
+                    b.HasIndex("InternetActivityDataId");
 
                     b.ToTable("HourActivityData");
                 });
@@ -107,15 +123,7 @@ namespace SA.Backend.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<int?>("HashtagDetailsId");
-
-                    b.Property<int?>("HourActivityDetailsId");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("HashtagDetailsId");
-
-                    b.HasIndex("HourActivityDetailsId");
 
                     b.ToTable("InternetActivityData");
                 });
@@ -127,13 +135,17 @@ namespace SA.Backend.Migrations
 
                     b.Property<DateTime>("Date");
 
+                    b.Property<int?>("FollowedUserId");
+
                     b.Property<DateTime>("Hour");
 
-                    b.Property<int>("Latitude");
+                    b.Property<double>("Latitude");
 
-                    b.Property<int>("Longitude");
+                    b.Property<double>("Longitude");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("FollowedUserId");
 
                     b.ToTable("Localization");
                 });
@@ -188,8 +200,6 @@ namespace SA.Backend.Migrations
 
                     b.Property<int?>("InternetActivityDataId");
 
-                    b.Property<int?>("LocalizationDataId");
-
                     b.Property<int?>("PersonalDataId");
 
                     b.Property<string>("TwitterId");
@@ -201,8 +211,6 @@ namespace SA.Backend.Migrations
                     b.HasIndex("CharacterDataId");
 
                     b.HasIndex("InternetActivityDataId");
-
-                    b.HasIndex("LocalizationDataId");
 
                     b.HasIndex("PersonalDataId");
 
@@ -239,15 +247,33 @@ namespace SA.Backend.Migrations
                         .HasForeignKey("FollowedUserId");
                 });
 
-            modelBuilder.Entity("SA.Contracts.Reports.InternetActivity.InternetActivityData", b =>
+            modelBuilder.Entity("SA.Contracts.Reports.InternetActivity.HashtagDetails", b =>
                 {
-                    b.HasOne("SA.Contracts.Reports.InternetActivity.HashtagDetails", "HashtagDetails")
+                    b.HasOne("SA.Contracts.User.FollowedUser", "FollowedUser")
                         .WithMany()
-                        .HasForeignKey("HashtagDetailsId");
+                        .HasForeignKey("FollowedUserId");
 
-                    b.HasOne("SA.Contracts.Reports.InternetActivity.HourActivityDetails", "HourActivityDetails")
+                    b.HasOne("SA.Contracts.Reports.InternetActivity.InternetActivityData")
+                        .WithMany("HashtagsDetails")
+                        .HasForeignKey("InternetActivityDataId");
+                });
+
+            modelBuilder.Entity("SA.Contracts.Reports.InternetActivity.HourActivityDetails", b =>
+                {
+                    b.HasOne("SA.Contracts.User.FollowedUser", "FollowedUser")
                         .WithMany()
-                        .HasForeignKey("HourActivityDetailsId");
+                        .HasForeignKey("FollowedUserId");
+
+                    b.HasOne("SA.Contracts.Reports.InternetActivity.InternetActivityData")
+                        .WithMany("HourActivityDetails")
+                        .HasForeignKey("InternetActivityDataId");
+                });
+
+            modelBuilder.Entity("SA.Contracts.Reports.Localization.Localization", b =>
+                {
+                    b.HasOne("SA.Contracts.User.FollowedUser", "FollowedUser")
+                        .WithMany()
+                        .HasForeignKey("FollowedUserId");
                 });
 
             modelBuilder.Entity("SA.Contracts.Twitter.user_tweets", b =>
@@ -266,10 +292,6 @@ namespace SA.Backend.Migrations
                     b.HasOne("SA.Contracts.Reports.InternetActivity.InternetActivityData", "InternetActivityData")
                         .WithMany()
                         .HasForeignKey("InternetActivityDataId");
-
-                    b.HasOne("SA.Contracts.Reports.Localization.Localization", "LocalizationData")
-                        .WithMany()
-                        .HasForeignKey("LocalizationDataId");
 
                     b.HasOne("SA.Contracts.Reports.PersonalData.PersonalData", "PersonalData")
                         .WithMany()

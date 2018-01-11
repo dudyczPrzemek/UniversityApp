@@ -1,8 +1,11 @@
 import { PersonalData } from './personal.data';
+import { CharacterData } from './character.data';
 
 export class FollowedUser {
-    public FacebookId: string;
-    public InstagramId: string;
-    public TwitterId: string;
-    public PersonalData: PersonalData;
+    public id: number;
+    public facebookId: string;
+    public instagramId: string;
+    public twitterId: string;
+    public personalData: PersonalData;
+    public characterData: CharacterData;
 }

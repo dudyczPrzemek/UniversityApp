@@ -1,5 +1,8 @@
 ﻿using GoldenEye.Backend.Core.DDD.Queries;
+using GoldenEye.Backend.Core.Repositories;
 using Newtonsoft.Json.Linq;
+using SA.Backend.Repositories.Interfaces;
+using SA.Contracts.Instagram.User;
 using SA.Contracts.Instagram.User.Queries;
 using System;
 using System.Collections.Generic;
@@ -9,8 +12,23 @@ using System.Threading.Tasks;
 
 namespace SA.Backend.Instagram.User
 {
-    public class InstagramUserQueryHandler : IAsyncQueryHandler<GetInstagramAccessToken, string>
+    public class InstagramUserQueryHandler : 
+        IAsyncQueryHandler<GetInstagramAccessToken, string>,
+        IAsyncQueryHandler<RefreshInstagramUserData, bool>
     {
+        private readonly IRepository<instagram_media_recent> instagramUserRepository;
+        private readonly IInstagramRepository instagramRepository;
+        private readonly IFollowedUserRepository followedUserRepository;
+
+        public InstagramUserQueryHandler(IRepository<instagram_media_recent> instagramUserRepository,
+            IInstagramRepository instagramRepository,
+            IFollowedUserRepository followedUserRepository)
+        {
+            this.instagramRepository = instagramRepository;
+            this.instagramUserRepository = instagramUserRepository;
+            this.followedUserRepository = followedUserRepository;
+        }
+
         public Task<string> Handle(GetInstagramAccessToken authData)
         {
             return GetAccessToken(authData);
@@ -46,6 +64,17 @@ namespace SA.Backend.Instagram.User
             var json = JObject.Parse(parsedResponse);
             var accessToken = json["access_token"].ToString();
             return accessToken;
+        }
+
+        public async Task<bool> Handle(RefreshInstagramUserData refreshData)
+        {
+            var followedUser = followedUserRepository.FindUserWithInstagramId(refreshData.InstagramUserId);
+            var instagramData = await instagramRepository.GetInstagramData(refreshData.InstagramUserId, refreshData.AccessToken);
+
+            instagramData.FollowedUser = followedUser;
+            instagramUserRepository.Add(instagramData);
+            instagramUserRepository.SaveChanges();
+            return true;
         }
     }
 }

@@ -20,6 +20,9 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { AppComponent } from './components/app/app.component';
 import { AuthenticationComponent } from './components/authentication/authentication.component';
 import { FollowedUsersService } from './services/followedUsers/followed.users.service';
+import { AddFollowedUserComponent } from './components/add-followed-user/add-followed-user.component';
+import { LocalizationService } from './services/localization/localization.service';
+import { InternetActivityService } from './services/internetActivity/internet.activity.service';
 
 export function appInitializeFactory(iconRegistry: IconRegistry): Function {
   return async () => {
@@ -35,6 +38,7 @@ export function appInitializeFactory(iconRegistry: IconRegistry): Function {
     SideNavigationComponent,
     TopNavigationComponent,
     AddStartPageComponent,
+    AddFollowedUserComponent,
     PersonalDataComponent,
     LocationAnalizerComponent,
     ActivityAnalizerComponent,
@@ -53,7 +57,9 @@ export function appInitializeFactory(iconRegistry: IconRegistry): Function {
   ],
   providers: [
     AuthenticationService,
-    FollowedUsersService
+    FollowedUsersService,
+    LocalizationService,
+    InternetActivityService
   ],
   bootstrap: [AppComponent]
 })
